@@ -1,0 +1,35 @@
+// GLOBAL
+$transition: 450ms;
+$transition-slow: 320ms;
+$finger-size: 48px;
+$border-radius: 4px;
+
+// COLORS
+$default: #f7e832;
+$c-heading-darken: #323231;
+$c-heading-dark: #444444;
+$c-heading-gray: #6a6a6a;
+$c-heading-gray-light: #bababa;
+$c-error: #ff4444;
+$c-success: #5ddb9f;
+$c-info: #62e3f5;
+$c-bg: #fcfcfc;
+$c-text: $c-heading-gray;
+
+$btn_main_bg:  linear-gradient(98deg, rgba(2,0,36,1) 0%, rgba(0,169,163,1) 0%, rgba(101,220,157,1) 100%);
+$btn_color_bg:  linear-gradient(98deg, rgba(2,0,36,1) 0%, rgba(255,177,101,1) 0%, rgba(255,106,120,1)  100%);
+$btn_shadow:          0px 2px 35px 0px rgba(50, 50, 50, 0.3);
+
+
+// TYPOGRAPHY
+$flh-normal: 1.3;
+$fw-light: 200;
+$fw-normal: normal;
+$fw-medium: 500;
+$fw-bold: bold;
+
+/// BOOTSTRAP CUSTOMIZED VARIABLES
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "default":    $default
+), $theme-colors);

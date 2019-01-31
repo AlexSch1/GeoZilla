@@ -1,0 +1,84 @@
+.premium
+
+	padding-bottom: 110px
+
+	.container_fluid
+		padding-left: 100px
+		padding-right: 100px
+
+	&__btn
+		margin: 0 auto
+		width: 100%
+
+		display: block
+
+		text-align: center
+
+	&__title_wr
+		text-align: center
+		margin-top: 100px
+
+	&__title
+		position: relative
+
+		display: inline-block
+		padding-top: 0
+
+		// margin: 0 auto
+
+		&::before
+			content: ""
+			display: block
+			position: absolute
+
+			background: url('/static/img/icon/crown_1f451.png') no-repeat  center center / cover
+
+			right: -60px
+			// transform: translate(-50%, 0)
+			top: 8px
+
+			height: 38px
+			width: 49px
+
+
+.trial
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+
+	&__wr_item
+		width: 406px
+		margin-left: 90px
+		box-sizing: border-box
+
+	&__text
+		font-size: 22px
+		font-family: 'Avenir-Light'
+		line-height: 32px
+
+		position: relative
+
+		color: #313131
+
+		margin-bottom: 35px
+		padding-left: 37px
+
+		&::before
+			content: ""
+			display: block
+			position: absolute
+
+			background: url('/static/img/icon/checkmark-filled_circle.png') no-repeat top center / cover
+
+			left: 0
+			top: 5px
+
+			height: 20px
+			width: 20px
+
+			background-color: #fff
+
+			border-radius: 50%
