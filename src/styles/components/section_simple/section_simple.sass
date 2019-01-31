@@ -4,8 +4,8 @@
 	position: relative
 
 	.container_fluid
-		padding-left: 84px
-		padding-right: 84px
+		// padding-left: 84px
+		// padding-right: 84px
 
 	&__content
 
@@ -13,10 +13,10 @@
 			margin-bottom: 25px
 
 		&_body
-			margin-bottom: 52px
+			// 
 
 		&_footer
-			// 
+			margin-top: 50px
 
 
 	&__title
@@ -33,6 +33,7 @@
 	&__text
 		font-size: 22px
 		font-family: 'Avenir-Light'
+		line-height: 32px
 
 		color: #313131 
 
@@ -41,7 +42,10 @@
 
 
 .section_loc
-	background: url('/static/img/picture/maps_b-copy-3.png') no-repeat top right / cover
+	background-image: url('/static/img/picture/maps_b-copy-3.png')
+	background-repeat: no-repeat
+	background-position-x: 140%
+
 
 	overflow: hidden
 
@@ -57,7 +61,8 @@
 		justify-content: flex-end
 
 	&__right
-		max-width: 421px	
+		max-width: 460px
+		margin-right: 8%	
 
 	&__decore
 	
@@ -70,20 +75,19 @@
 
 			&_one
 				top: -103px
-				left: 27%
-				width: 804px
+				left: 13%
+				width: 749px
+
 		
 
 
 .section_child
 	background: url('/static/img/picture/adorable-boy-child-1688253.png') no-repeat right top / cover
-	
-	
 
 	&__title
 		text-align: left
 
-		padding-top: 152px
+		padding-top: 140px
 
 		color: #fff
 
@@ -91,11 +95,18 @@
 		color: #fff
 
 	&__left
-		max-width: 421px
+		max-width: 530px
+		margin-left: 6%
+
+	&__content_footer
+		margin-top: 82px
+
 
 
 .section_elderly
-	background: url('/static/img/picture/adult-aged-bench-1652340.png') no-repeat left top / cover
+	background-image: url('/static/img/picture/adult-aged-bench-1652340.jpg')
+	background-repeat: no-repeat
+	background-size: cover
 	
 	&__content
 		display: -webkit-flex
@@ -105,10 +116,13 @@
 		display: flex
 		justify-content: flex-end
 
+	&__btn
+		margin-bottom: 12px
+
 	&__title
 		text-align: left
 
-		padding-top: 152px
+		padding-top: 165px
 		max-width: 448px
 
 		color: #fff
@@ -128,7 +142,7 @@
 	&__title
 		text-align: left
 
-		padding-top: 152px
+		padding-top: 146px
 		max-width: 308px
 
 		color: #fff
@@ -137,4 +151,5 @@
 		color: #fff
 
 	&__left
-		max-width: 556px
+		max-width: 588px
+		margin-left: 6%

@@ -45,6 +45,10 @@ img, svg {
 
   display: block;
   position: relative;
+
+  outline: 1px solid red;
+
+  box-sizing: border-box;
 }
 
 .container {
@@ -52,6 +56,8 @@ img, svg {
 
   display: block;
   position: relative;
+
+  box-sizing: border-box;
 }
 
 .title_section {

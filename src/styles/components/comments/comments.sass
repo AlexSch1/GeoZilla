@@ -1,8 +1,8 @@
 .comments
-	padding-bottom: 380px
+	padding-bottom: 110px
 
 	&__title
-		padding-bottom: 14px
+		padding-bottom: 15px
 
 	&__stars
 		display: -webkit-flex
@@ -13,6 +13,8 @@
 		justify-content: center
 		align-content: center
 		align-items: center
+
+		margin-bottom: 60px
 
 
 
@@ -36,23 +38,33 @@
 		display: -o-flex
 		display: flex
 
+		margin-bottom: 30px
+
 	&__left, &__right 
 		width: 50%
-		padding-left: 14px
+		// padding-left: 14px
+		// padding-right: 14px
+
+	&__left
 		padding-right: 14px
 
 	&__right 
-		margin-top: 40px
+		padding: 40px 0 0 14px
 
 	&__btn
-		text-align: center
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
 		
 
 		
 
 
 .coment
-	padding: 34px
+	padding: 30px 30px 30px 36px
 	margin-bottom: 30px
 
 	box-shadow: 3px 4px 12px 4px rgba(0,0,0,0.3)
@@ -84,4 +96,24 @@
 
 		font-size: 22px
 		font-family: 'Avenir-Medium'
+
+		position: relative
+
+		&::before
+			content: ""
+			display: block
+			position: absolute
+
+			left: 0
+			top: -50%
+			margin-top: 2px
+
+			// transform: translate(0, 45%)
+
+
+			height: 1px
+			width: 6px
+
+			background-color: #000
+
 		
