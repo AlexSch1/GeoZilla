@@ -125,6 +125,27 @@
 
 
 .section_child
+	position: relative
+	z-index: 3
+
+	&::after
+		content: ""
+
+		display: block
+		position: absolute
+
+		top: 0
+		left: 0
+		height: 100%
+		width: 60%
+
+		z-index: -1
+
+		background-image: linear-gradient(to right,rgb(79, 95, 111) 0%,rgba(79, 95, 111, .01) 71.4%)
+
+
+
+
 	background: url('/static/img/picture/adorable-boy-child-1688253.png') no-repeat right top / cover
 
 	@media(max-width:1008px)
@@ -177,6 +198,24 @@
 	background-repeat: no-repeat
 	background-size: cover
 
+	position: relative
+	z-index: 3
+
+	&::after
+		content: ""
+
+		display: block
+		position: absolute
+
+		top: 0
+		right: 0
+		height: 100%
+		width: 60%
+
+		z-index: -1
+
+		background-image: linear-gradient(to left,rgba(0, 0, 0, .9) 0%,rgba(0, 0, 0, .01) 71.4%)
+
 	@media (max-width: 1008px)
 		padding-bottom: 37px
 	
@@ -224,6 +263,24 @@
 
 .section_pets
 	background: url('/static/img/picture/animal-dog-golden-retriever-9080.png') no-repeat left top / cover
+
+	position: relative
+	z-index: 3
+
+	&::after
+		content: ""
+
+		display: block
+		position: absolute
+
+		top: 0
+		left: 0
+		height: 100%
+		width: 60%
+
+		z-index: -1
+
+		background-image: linear-gradient(to right,#1e3217 40%,rgba(29, 48, 22, .1) 91.4%)
 
 	@media(max-width:1439px)
 		background-position-x: right
