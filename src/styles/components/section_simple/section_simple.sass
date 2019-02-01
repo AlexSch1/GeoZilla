@@ -15,7 +15,7 @@
 		&_head
 			margin-bottom: 25px
 
-			@media(max-width:768px)
+			@media(max-width:767px)
 				padding-top: 170px
 				margin-top: 0
 
@@ -28,7 +28,7 @@
 			@media(max-width:1024px)
 				margin-top: 30px
 
-			@media(max-width:768px)
+			@media(max-width:767px)
 				margin-top: 3px
 
 
@@ -64,7 +64,8 @@
 
 .section_loc
 	background-image: url('/static/img/picture/maps_b-copy-3.png')
-	background-repeat: no-repeat
+	background-repeat-x: repeat
+	background-repeat-y: no-repeat
 	background-position-x: 140%
 
 	overflow: hidden
@@ -87,9 +88,18 @@
 
 		background-image: linear-gradient(to left,#fff 60%,rgba(0, 0, 0, .01) 91.4%)
 
-	@media(max-width:768px)
+		@media(max-width:767px)
+			width: 100%
+			height: 70%
+			top: initial
+			bottom: 0
+
+			background-image: linear-gradient(to top,#fff 60%,rgba(0, 0, 0, .01) 91.4%)
+
+	@media(max-width:767px)
 		background-position: center top
 		background-size: 164%
+		background-size: auto
 
 	&__title
 		text-align: left
@@ -129,11 +139,15 @@
 				left: 14%
 				width: 483px
 
-				@media(max-width:1024px)
-					width: 348px
-					top: -18px
+				@media(max-width:1100px)
+					left: 5%
 
 				@media(max-width:1024px)
+					width: 339px
+					top: -2%
+					left: 16%
+
+				@media(max-width:767px)
 					width: 206px
 					top: -4px
 					left: 51%
@@ -165,8 +179,9 @@
 
 	background: url('/static/img/picture/adorable-boy-child-1688253.png') no-repeat right top / cover
 
-	@media(max-width:768px)
+	@media(max-width:767px)
 		padding-bottom: 50px
+		background-position: 72%
 
 	&__title
 		text-align: left
@@ -186,7 +201,7 @@
 		@media(max-width:1024px)
 			margin-bottom: 15px
 
-		@media(max-width:768px)
+		@media(max-width:767px)
 			padding-top: 25px
 
 	&__text
@@ -200,7 +215,7 @@
 			margin-left: 9%
 			max-width: 352px
 
-		@media(max-width:768px)
+		@media(max-width:767px)
 			margin-left: 0
 
 	&__content_footer
@@ -233,8 +248,9 @@
 
 		background-image: linear-gradient(to left,rgba(0, 0, 0, .9) 0%,rgba(0, 0, 0, .01) 71.4%)
 
-	@media (max-width: 768px)
+	@media (max-width: 767px)
 		padding-bottom: 37px
+		background-position: 39%
 	
 	&__content
 		display: -webkit-flex
@@ -248,7 +264,7 @@
 		@media(max-width:1024px)
 			margin-top: 50px
 
-		@media (max-width: 768px)
+		@media (max-width: 767px)
 			margin-top: 30px
 
 
@@ -266,7 +282,7 @@
 		@media(max-width:1024px)
 			padding-top: 153px
 
-		@media (max-width: 768px)
+		@media (max-width: 767px)
 			padding-top: 0
 
 	&__text
@@ -302,8 +318,9 @@
 	@media(max-width:1024px)
 		background-position-x: right
 
-	@media (max-width: 768px)
+	@media (max-width: 767px)
 		padding-bottom: 47px
+		background-position: 72%
 
 	&__content
 		// 
@@ -312,7 +329,7 @@
 		@media(max-width:1024px)
 			margin-top: 42px
 
-		@media (max-width: 768px)
+		@media (max-width: 767px)
 			margin-top: 28px
 
 	&__title
@@ -323,7 +340,7 @@
 
 		color: #fff
 
-		@media (max-width: 768px)
+		@media (max-width: 767px)
 			padding-top: 0
 
 
@@ -339,5 +356,5 @@
 			max-width: 358px
 			margin-left: 9%
 
-		@media (max-width: 768px)
+		@media (max-width: 767px)
 			margin-left: 0

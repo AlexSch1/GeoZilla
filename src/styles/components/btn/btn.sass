@@ -89,6 +89,7 @@
 	// padding: 19px 33px
 
 	background: transparent
+	background-image: none
 
 	font-size: 18px
 	line-height: 15px
@@ -101,7 +102,31 @@
 	letter-spacing: normal
 	text-transform: none
 	color: #000
+	z-index: 1
 
+	&__bg
+		background-color: #41ca9f
+		/* IE9, iOS 3.2+ */
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMGE5YTMiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzY1ZGM5ZCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNzAzIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==)
+		background-image: -webkit-gradient(linear, 0% 100%, 100% 0%,color-stop(0, rgb(0, 169, 163)),color-stop(0.703, rgb(101, 220, 157)))
+		/* Android 2.3 */
+		background-image: -webkit-linear-gradient(bottom left,rgb(0, 169, 163) 0%,rgb(101, 220, 157) 70.3%)
+		/* IE10+ */
+		background-image: linear-gradient(to top right,rgb(0, 169, 163) 0%,rgb(101, 220, 157) 70.3%)
+		background-image: -ms-linear-gradient(bottom left,rgb(0, 169, 163) 0%,rgb(101, 220, 157) 70.3%)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff65dc9d",endColorstr="#ff00a9a3",GradientType=0)
+		
+		display: block
+		position: absolute
+
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		opacity: 0
+		// border: 1px  solid transparent
+		transition: $transition
+		z-index: -1
 
 
 	@media(max-width:1024px)
@@ -114,17 +139,13 @@
 		border-radius: 5px
 
 	&:hover
-		background-color: #41ca9f
-		/* IE9, iOS 3.2+ */
-		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMGE5YTMiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzY1ZGM5ZCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNzAzIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==)
-		background-image: -webkit-gradient(linear, 0% 100%, 100% 0%,color-stop(0, rgb(0, 169, 163)),color-stop(0.703, rgb(101, 220, 157)))
-		/* Android 2.3 */
-		background-image: -webkit-linear-gradient(bottom left,rgb(0, 169, 163) 0%,rgb(101, 220, 157) 70.3%)
-		/* IE10+ */
-		background-image: linear-gradient(to top right,rgb(0, 169, 163) 0%,rgb(101, 220, 157) 70.3%)
-		background-image: -ms-linear-gradient(bottom left,rgb(0, 169, 163) 0%,rgb(101, 220, 157) 70.3%)
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff65dc9d",endColorstr="#ff00a9a3",GradientType=0)
-		border: 1px  solid transparent
+		border: 1px  solid rgba(0,0,0,0)
+		border: none
+		color: #fff
+
+		.btn_small__bg
+			opacity: 1
+
 
 .btn_color
 	background-color: #ff8c6f

@@ -50,7 +50,7 @@ img, svg {
   display: block;
   position: relative;
 
-  outline: 1px solid red;
+  // outline: 1px solid red;
 
   box-sizing: border-box;
 
@@ -59,9 +59,10 @@ img, svg {
 
     padding-left: 15px;
     padding-right: 15px;
+    box-sizing: initial;
   }
 
-  @media(max-width:768px) {
+  @media(max-width:767px) {
     padding-left: 15px;
     padding-right: 15px;
     max-width: 290px;
