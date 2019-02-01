@@ -5,8 +5,14 @@
 
 	width: 100%
 
+	@media(max-width:1439px)
+		text-align: center
+
 	&__nav
 		padding-top: 22px
+
+		@media(max-width:1439px)
+			padding-top: 17px
 
 	&__title
 		font-size: 54px
@@ -14,13 +20,39 @@
 
 		margin: 187px 0 21px 0
 
+		@media(max-width:1439px)
+			font-size: 38px
+			line-height: 45px
+
+			margin: 50px auto 10px auto
+			width: 40%
+
 	&__text
 		font-size: 22px
 
 		margin-bottom: 37px
 
+		@media(max-width:1439px)
+			font-size: 14px
+			
+			margin: 0 auto 193px auto
+			width: 20%
+
 	&__btn
 		padding-bottom: 147px
+
+		@media(max-width:1439px)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+
+			padding-bottom: 40px
+
+		
+
 
 
 
@@ -41,6 +73,9 @@
 
 	color: #fff
 
+	@media(max-width:1439px)
+		justify-content: center
+
 	&__bnt
 		display: -webkit-flex
 		display: -moz-flex
@@ -55,3 +90,17 @@
 		font-family: 'Avenir-Medium'
 
 		margin-right: 34px
+
+		@media(max-width:1439px)
+			font-size: 13px
+
+			margin-right: 22px
+
+	&__logo 
+		@media(max-width:1439px)
+			margin-right: 78px
+	
+	&__logo_img
+		@media(max-width:1439px)
+			height: 45px
+			width: 36px

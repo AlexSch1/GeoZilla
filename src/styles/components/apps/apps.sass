@@ -5,6 +5,10 @@
 
 	// background-image: linear-gradient(45deg, rgba(17,141,152,1) 0%, rgba(14,163,158,1) 66%, rgba(12,175,161,1) 100%)
 	background-image: linear-gradient(-95deg,#118c98,#0ea39e 66%,#0cafa2)
+
+	@media(max-width:1439px)
+		padding-bottom: 65px
+		
 	.container_fluid
 		// padding-left: 100px
 		// padding-right: 100px
@@ -12,6 +16,12 @@
 	&__title
 		
 .discover_app
+
+	&__item_head_fix
+		@media(max-width:1439px)
+			margin-bottom: 5px
+
+
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -21,6 +31,9 @@
 	
 	&__item:first-child
 		margin-left: 15%
+
+		@media(max-width:1439px)
+			margin-left: 9%
 	
 	&__item
 		// border: 1px solid
@@ -40,6 +53,9 @@
 
 		&_body
 			margin: 5px 0 38px 0
+
+			@media(max-width:1439px)
+				margin-bottom: 34px
 
 	&__list
 		&_item
@@ -68,6 +84,10 @@
 
 				border-radius: 50%
 
+			@media(max-width:1439px)
+				font-size: 12px
+				line-height: 26px
+
 
 	&__social
 		display: -webkit-flex
@@ -84,6 +104,10 @@
 		width: 169px
 		display: block
 
+		@media(max-width:1439px)
+			width: 118px
+			height: 36px
+
 
 		&_img
 			max-width: 100%
@@ -95,6 +119,8 @@
 	&__stars
 		width: 79px
 		// margin-bottom: 15px
+		@media(max-width:1439px)
+			width: 52px
 
 	&__img
 		display: block
@@ -106,12 +132,14 @@
 		padding-left: 0px
 		padding-bottom: 30px
 
+		@media(max-width:1439px)
+			height: 57px
+			width: 57px
+			padding-bottom: 15px
+
 		&_size2
-			width: 127px
-			height: 127px
-			padding: 0
-			margin-left: -23px
-			padding-bottom: 0px
+			// 
+
 
 
 	&__title 
@@ -119,5 +147,10 @@
 		font-family: 'Avenir-Medium'
 
 		margin-bottom: 5px
+
+		@media(max-width:1439px)
+			font-size: 18px
+
+			margin-bottom: 0
 
 	

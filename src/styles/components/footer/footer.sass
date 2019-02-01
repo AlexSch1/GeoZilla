@@ -33,18 +33,34 @@
 		&_link:first-child
 			margin-right: 24px
 
-			&_link
-				height: 50px
-				width: 169px
-				display: block
+			@media(max-width:1439px)
+				margin-right: 20px
+
+		&_link
+			height: 50px
+			width: 169px
+			display: block
+
+			@media(max-width:1439px)
+				width: 118px
+				height: 35px
+
 
 			&_img
 				max-width: 100%
 				height: auto     
 				display: block
+
+				// @media(max-width:1439px)
+				// 	width: 118px
+				// 	height: 35px
+
 	
 	&__title
 		padding: 50px 0 22px 0
+
+		@media(max-width:1439px)
+			padding: 37px 0 17px 0
 
 	&__list_wr
 		display: -webkit-flex

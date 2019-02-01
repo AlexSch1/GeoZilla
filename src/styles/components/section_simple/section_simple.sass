@@ -3,6 +3,9 @@
 
 	position: relative
 
+	@media(max-width:1439px)
+		padding-bottom: 70px
+
 	.container_fluid
 		// padding-left: 84px
 		// padding-right: 84px
@@ -18,6 +21,9 @@
 		&_footer
 			margin-top: 50px
 
+			@media(max-width:1439px)
+				margin-top: 30px
+
 
 	&__title
 		font-size: 40px
@@ -30,12 +36,20 @@
 		max-width: 360px
 		padding-bottom: 0
 
+		@media(max-width:1439px)
+			font-size: 28px
+			line-height: 36px
+
 	&__text
 		font-size: 22px
 		font-family: 'Avenir-Light'
 		line-height: 32px
 
 		color: #313131 
+
+		@media(max-width:1439px)
+			font-size: 14px
+			line-height: 22px
 
 
 
@@ -52,6 +66,11 @@
 	&__title
 		text-align: left
 
+		@media(max-width:1439px)
+			max-width: 232px
+
+			padding-top: 108px
+
 	&__content
 		display: -webkit-flex
 		display: -moz-flex
@@ -63,6 +82,11 @@
 	&__right
 		max-width: 460px
 		margin-right: 8%	
+
+		@media(max-width:1439px)
+			max-width: 314px
+			margin-right: 0%
+
 
 	&__decore
 	
@@ -78,6 +102,9 @@
 				left: 13%
 				width: 749px
 
+				@media(max-width:1439px)
+					width: 504px
+
 		
 
 
@@ -91,6 +118,15 @@
 
 		color: #fff
 
+		@media(max-width:1439px)
+			padding-top: 180px
+			max-width: 250px
+			margin-bottom: 10px
+
+	&__content_head
+		@media(max-width:1439px)
+			margin-bottom: 15px
+
 	&__text
 		color: #fff
 
@@ -98,8 +134,14 @@
 		max-width: 530px
 		margin-left: 6%
 
+		@media(max-width:1439px)
+			margin-left: 9%
+			max-width: 352px
+
 	&__content_footer
 		margin-top: 82px
+		@media(max-width:1439px)
+			margin-top: 55px
 
 
 
@@ -116,6 +158,11 @@
 		display: flex
 		justify-content: flex-end
 
+	&__content_footer
+		@media(max-width:1439px)
+			margin-top: 50px
+
+
 	&__btn
 		margin-bottom: 12px
 
@@ -127,17 +174,30 @@
 
 		color: #fff
 
+		@media(max-width:1439px)
+			padding-top: 153px
+
 	&__text
 		color: #fff
 
 	&__right
 		max-width: 556px
 
+		@media(max-width:1439px)
+			max-width: 306px
+
 .section_pets
 	background: url('/static/img/picture/animal-dog-golden-retriever-9080.png') no-repeat left top / cover
 
+	@media(max-width:1439px)
+		background-position-x: right
+
 	&__content
 		// 
+
+	&__content_footer
+		@media(max-width:1439px)
+			margin-top: 42px
 
 	&__title
 		text-align: left
@@ -147,9 +207,15 @@
 
 		color: #fff
 
+
+
 	&__text
 		color: #fff
 
 	&__left
 		max-width: 588px
 		margin-left: 6%
+
+		@media(max-width:1439px)
+			max-width: 358px
+			margin-left: 9%

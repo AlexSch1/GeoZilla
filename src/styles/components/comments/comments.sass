@@ -1,6 +1,9 @@
 .comments
 	padding-bottom: 110px
 
+	@media(max-width:1439px)
+		padding-bottom: 70px
+
 	&__title
 		padding-bottom: 15px
 
@@ -16,11 +19,19 @@
 
 		margin-bottom: 60px
 
+		@media(max-width:1439px)
+			flex-direction: column
+
+			margin-bottom: 35px
+
 
 
 		&_text
 			font-size: 22px
 			font-family: 'Avenir-Light'
+
+			@media(max-width:1439px)
+				font-size: 14px
 		
 		&_img
 			width: 154px
@@ -31,6 +42,12 @@
 			border: 1px solid #b7b7b7
 			border-radius: 80px
 
+			@media(max-width:1439px)
+				width: 109px
+				height: 16px
+				padding: 4px 12px
+				margin-top: 20px
+
 	&__wr
 		display: -webkit-flex
 		display: -moz-flex
@@ -39,6 +56,11 @@
 		display: flex
 
 		margin-bottom: 30px
+
+		@media(max-width:1439px)
+			padding-left: 63px
+			padding-right: 63px
+			margin-bottom: 40px
 
 	&__left, &__right 
 		width: 50%
@@ -50,6 +72,9 @@
 
 	&__right 
 		padding: 40px 0 0 14px
+
+		@media(max-width:1439px)
+			padding-top: 26px
 
 	&__btn
 		display: -webkit-flex
@@ -68,6 +93,11 @@
 	margin-bottom: 30px
 
 	box-shadow: 3px 4px 12px 4px rgba(0,0,0,0.3)
+
+	@media(max-width:1439px)
+		padding: 25px 10px 10px 25px
+
+		margin-bottom: 15px
 
 	&__footer
 		display: -webkit-flex
@@ -91,6 +121,15 @@
 
 		color: #313131
 
+		@media(max-width:1439px)
+			font-size: 14px
+			line-height: 21px
+
+	&__img
+		@media(max-width:1439px)
+			height: 20px
+			width: 18px
+
 	&__name
 		color: #000
 
@@ -98,6 +137,9 @@
 		font-family: 'Avenir-Medium'
 
 		position: relative
+
+		@media(max-width:1439px)
+			font-size: 14px
 
 		&::before
 			content: ""
@@ -115,5 +157,8 @@
 			width: 6px
 
 			background-color: #000
+
+			@media(max-width:1439px)
+				top: -77%
 
 		
