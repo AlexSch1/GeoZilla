@@ -12,16 +12,16 @@
 
 
 	.container_fluid
-		padding-left: 68px
-		padding-right: 68px
+		padding-left: 84px
+		padding-right: 84px
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			padding-left: 33px
 			padding-right: 33px
 
-		@media (max-width: 1008px)
-			padding-left: 23px
-			padding-right: 23px
+		@media (max-width: 768px)
+			padding-left: 38px
+			padding-right: 38px
 
 	&__social
 		display: -webkit-flex
@@ -34,7 +34,7 @@
 
 		margin-bottom: 102px
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			margin-bottom: 70px
 
 		&::before
@@ -43,28 +43,28 @@
 			position: absolute
 
 			left: 0
-			top: 180%
+			top: 194%
 
 			height: 1px
 			width: 100%
 
 			background-color: #fff
 
-			@media(max-width:1439px)
+			@media(max-width:1024px)
 				top: 190%
 				width: 44%
 				left: 50%
 				transform: translateX(-50%)
 
-			@media (max-width: 1008px)
-				width: 120%
-				left: -9%
+			@media (max-width: 768px)
+				width: 100%
+				left: 0%
 				transform: none
 
 		&_link:first-child
 			margin-right: 24px
 
-			@media(max-width:1439px)
+			@media(max-width:1024px)
 				margin-right: 20px
 
 		&_link
@@ -72,7 +72,7 @@
 			width: 169px
 			display: block
 
-			@media(max-width:1439px)
+			@media(max-width:1024px)
 				width: 118px
 				height: 35px
 
@@ -82,7 +82,7 @@
 				height: auto     
 				display: block
 
-				// @media(max-width:1439px)
+				// @media(max-width:1024px)
 				// 	width: 118px
 				// 	height: 35px
 
@@ -90,7 +90,7 @@
 	&__title
 		padding: 50px 0 22px 0
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			padding: 37px 0 17px 0
 
 	&__list_wr
@@ -102,10 +102,10 @@
 
 		padding-bottom: 50px
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			padding-bottom: 30px
 
-		@media (max-width: 1008px)
+		@media (max-width: 768px)
 			flex-wrap: wrap
 			justify-content: space-between
 
@@ -121,41 +121,53 @@
 
 		padding-bottom: 208px
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			font-size: 12px
 
 			padding-bottom: 110px
+			padding-top: 12px
 
-		@media (max-width: 1008px)
+		@media (max-width: 768px)
 			font-size: 11px
 			padding-bottom: 75px
+			padding-top: 27px
 
 
 
 .nav_list:nth-child(1)
 	width: 24%
-	@media (max-width: 1008px)
+	@media (max-width: 1024px)
+		width: 26%
+	@media (max-width: 768px)
 		width: 50%
 
 .nav_list:nth-child(2)
 	width: 21%
-	@media (max-width: 1008px)
-		width: 29%
+	@media (max-width: 1024px)
+		width: 21%
+	@media (max-width: 768px)
+		width: 32%
 
 .nav_list:nth-child(3)
 	width: 23%
-	@media (max-width: 1008px)
+	@media (max-width: 1024px)
+		// 
+	@media (max-width: 768px)
 		width: 50%
 		padding-bottom: 0
 
 .nav_list:nth-child(4)
 	width: 19%
-	@media (max-width: 1008px)
-		width: 29%
+	@media (max-width: 1024px)
+		width: 23%
+	@media (max-width: 768px)
+		width: 32%
 
 .nav_list:nth-child(5)
 	width: 13%
-	@media (max-width: 1008px)
+	@media (max-width: 1024px)
+		width: 9%
+	@media (max-width: 768px)
 		width: 100%
 		margin-top: -75px
 		padding-bottom: 0
@@ -165,10 +177,10 @@
 
 	font-size: 22px
 
-	@media(max-width:1439px)
+	@media(max-width:1024px)
 		font-size: 14px
 
-	@media (max-width: 1008px)
+	@media (max-width: 768px)
 		padding-bottom: 40px
 	
 
@@ -186,8 +198,8 @@
 
 		line-height: 60px
 
-		@media(max-width:1439px)
-			line-height: 40px
+		@media(max-width:1024px)
+			line-height: 37px
 
 // font-family: 'Avenir-Medium'
 // font-family: 'Avenir-Light'

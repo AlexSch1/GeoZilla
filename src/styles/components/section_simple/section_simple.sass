@@ -3,7 +3,7 @@
 
 	position: relative
 
-	@media(max-width:1439px)
+	@media(max-width:1024px)
 		padding-bottom: 70px
 
 	.container_fluid
@@ -15,7 +15,7 @@
 		&_head
 			margin-bottom: 25px
 
-			@media(max-width:1008px)
+			@media(max-width:768px)
 				padding-top: 170px
 				margin-top: 0
 
@@ -25,10 +25,10 @@
 		&_footer
 			margin-top: 50px
 
-			@media(max-width:1439px)
+			@media(max-width:1024px)
 				margin-top: 30px
 
-			@media(max-width:1008px)
+			@media(max-width:768px)
 				margin-top: 3px
 
 
@@ -43,7 +43,7 @@
 		max-width: 360px
 		padding-bottom: 0
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			font-size: 28px
 			line-height: 36px
 
@@ -54,7 +54,7 @@
 
 		color: #313131 
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			font-size: 14px
 			line-height: 22px
 
@@ -67,17 +67,34 @@
 	background-repeat: no-repeat
 	background-position-x: 140%
 
-
 	overflow: hidden
 
-	@media(max-width:1008px)
+	position: relative
+	z-index: 3
+
+	&::after
+		content: ""
+
+		display: block
+		position: absolute
+
+		top: 0
+		right: 0
+		height: 100%
+		width: 80%
+
+		z-index: -1
+
+		background-image: linear-gradient(to left,#fff 60%,rgba(0, 0, 0, .01) 91.4%)
+
+	@media(max-width:768px)
 		background-position: center top
 		background-size: 164%
 
 	&__title
 		text-align: left
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			max-width: 232px
 			padding-top: 150px
 
@@ -93,8 +110,8 @@
 		max-width: 460px
 		margin-right: 8%	
 
-		@media(max-width:1439px)
-			max-width: 314px
+		@media(max-width:1024px)
+			max-width: 300px
 			margin-right: 0%
 
 
@@ -112,11 +129,11 @@
 				left: 14%
 				width: 483px
 
-				@media(max-width:1439px)
+				@media(max-width:1024px)
 					width: 348px
 					top: -18px
 
-				@media(max-width:1439px)
+				@media(max-width:1024px)
 					width: 206px
 					top: -4px
 					left: 51%
@@ -137,18 +154,18 @@
 		top: 0
 		left: 0
 		height: 100%
-		width: 60%
+		width: 70%
 
 		z-index: -1
 
-		background-image: linear-gradient(to right,rgb(79, 95, 111) 0%,rgba(79, 95, 111, .01) 71.4%)
+		background-image: linear-gradient(to right,rgb(79, 95, 111) 20%,rgba(79, 95, 111, .01) 71.4%)
 
 
 
 
 	background: url('/static/img/picture/adorable-boy-child-1688253.png') no-repeat right top / cover
 
-	@media(max-width:1008px)
+	@media(max-width:768px)
 		padding-bottom: 50px
 
 	&__title
@@ -158,7 +175,7 @@
 
 		color: #fff
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			padding-top: 180px
 			max-width: 250px
 			margin-bottom: 10px
@@ -166,10 +183,10 @@
 		
 
 	&__content_head
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			margin-bottom: 15px
 
-		@media(max-width:1008px)
+		@media(max-width:768px)
 			padding-top: 25px
 
 	&__text
@@ -179,16 +196,16 @@
 		max-width: 530px
 		margin-left: 6%
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			margin-left: 9%
 			max-width: 352px
 
-		@media(max-width:1008px)
+		@media(max-width:768px)
 			margin-left: 0
 
 	&__content_footer
 		margin-top: 82px
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			margin-top: 55px
 
 
@@ -216,7 +233,7 @@
 
 		background-image: linear-gradient(to left,rgba(0, 0, 0, .9) 0%,rgba(0, 0, 0, .01) 71.4%)
 
-	@media (max-width: 1008px)
+	@media (max-width: 768px)
 		padding-bottom: 37px
 	
 	&__content
@@ -228,10 +245,10 @@
 		justify-content: flex-end
 
 	&__content_footer
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			margin-top: 50px
 
-		@media (max-width: 1008px)
+		@media (max-width: 768px)
 			margin-top: 30px
 
 
@@ -246,10 +263,10 @@
 
 		color: #fff
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			padding-top: 153px
 
-		@media (max-width: 1008px)
+		@media (max-width: 768px)
 			padding-top: 0
 
 	&__text
@@ -258,7 +275,7 @@
 	&__right
 		max-width: 556px
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			max-width: 306px
 
 .section_pets
@@ -282,20 +299,20 @@
 
 		background-image: linear-gradient(to right,#1e3217 40%,rgba(29, 48, 22, .1) 91.4%)
 
-	@media(max-width:1439px)
+	@media(max-width:1024px)
 		background-position-x: right
 
-	@media (max-width: 1008px)
+	@media (max-width: 768px)
 		padding-bottom: 47px
 
 	&__content
 		// 
 
 	&__content_footer
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			margin-top: 42px
 
-		@media (max-width: 1008px)
+		@media (max-width: 768px)
 			margin-top: 28px
 
 	&__title
@@ -306,7 +323,7 @@
 
 		color: #fff
 
-		@media (max-width: 1008px)
+		@media (max-width: 768px)
 			padding-top: 0
 
 
@@ -318,9 +335,9 @@
 		max-width: 588px
 		margin-left: 6%
 
-		@media(max-width:1439px)
+		@media(max-width:1024px)
 			max-width: 358px
 			margin-left: 9%
 
-		@media (max-width: 1008px)
+		@media (max-width: 768px)
 			margin-left: 0

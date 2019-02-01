@@ -41,8 +41,11 @@ img, svg {
 }
 
 .container_fluid {
-  max-width: 1140px;
+  max-width: 1170px;
   margin: 0 auto;
+  
+  padding-left: 17px;
+  padding-right: 17px;
 
   display: block;
   position: relative;
@@ -51,12 +54,18 @@ img, svg {
 
   box-sizing: border-box;
 
-  @media(max-width:1439px) {
+  @media(max-width:1024px) {
     max-width: 720px;
+
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
-  @media(max-width:1008px) {
+  @media(max-width:768px) {
+    padding-left: 15px;
+    padding-right: 15px;
     max-width: 290px;
+    box-sizing: initial;
   }
 }
 
@@ -78,7 +87,7 @@ img, svg {
   padding-top: 100px;
   padding-bottom: 52px;
 
-  @media(max-width:1439px) {
+  @media(max-width:1024px) {
     font-size: 28px;
 
     padding-top: 65px;
