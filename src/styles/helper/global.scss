@@ -1,7 +1,5 @@
 body {
   color: #000;
-  // background-color: $c-bg;
-  // letter-spacing: -0.3px;
   padding: 0;
   margin: 0;
   font-family: 'Avenir-Medium';
@@ -50,8 +48,6 @@ img, svg {
   display: block;
   position: relative;
 
-  // outline: 1px solid red;
-
   box-sizing: border-box;
 
   @media(max-width:1024px) {
@@ -70,14 +66,6 @@ img, svg {
   }
 }
 
-.container {
-  max-width: 1140px;
-
-  display: block;
-  position: relative;
-
-  box-sizing: border-box;
-}
 
 .title_section {
   font-size: 40px;
