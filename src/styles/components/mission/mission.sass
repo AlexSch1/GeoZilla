@@ -8,7 +8,10 @@
 	position: relative
 
 	@media(max-width:1439px)
-		margin-bottom: 62px
+		margin-bottom: 22px
+
+	@media(max-width:1008px)
+		margin-bottom: 20px
 
 	&__title_wr
 		padding: 103px 0 97px
@@ -39,6 +42,10 @@
 	display: flex
 	justify-content: center
 
+	@media(max-width:1008px)
+		flex-wrap: wrap
+		justify-content: space-between
+
 	&__item
 		text-align: center
 
@@ -46,6 +53,15 @@
 		width: 25%
 		margin-left: 14px
 		margin-right: 14px
+
+		@media(max-width:1008px)
+
+
+			width: 37%
+			margin: 0 0 20px 0
+
+	&__item:nth-child(odd)
+		width: 51%
 		
 	&__title
 		font-family: 'Avenir-Medium'

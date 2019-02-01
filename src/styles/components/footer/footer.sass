@@ -1,6 +1,15 @@
 .footer
 	color: #fff
-	background-image: linear-gradient(95deg, #118c98, #0ea39e 66%, #0cafa2)
+	background-color: #1f867a
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDQ1MDU3IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMyYTlkODgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjU4NiIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=)
+    background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(4, 80, 87)),color-stop(0.586, rgb(42, 157, 136)))
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(bottom,rgb(4, 80, 87) 0%,rgb(42, 157, 136) 58.6%)
+    /* IE10+ */
+    background-image: linear-gradient(to top,rgb(4, 80, 87) 0%,rgb(42, 157, 136) 58.6%)
+    background-image: -ms-linear-gradient(bottom,rgb(4, 80, 87) 0%,rgb(42, 157, 136) 58.6%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2a9d88",endColorstr="#ff045057",GradientType=0)
+
 
 	.container_fluid
 		padding-left: 68px
@@ -9,6 +18,10 @@
 		@media(max-width:1439px)
 			padding-left: 33px
 			padding-right: 33px
+
+		@media (max-width: 1008px)
+			padding-left: 23px
+			padding-right: 23px
 
 	&__social
 		display: -webkit-flex
@@ -42,6 +55,11 @@
 				width: 44%
 				left: 50%
 				transform: translateX(-50%)
+
+			@media (max-width: 1008px)
+				width: 120%
+				left: -9%
+				transform: none
 
 		&_link:first-child
 			margin-right: 24px
@@ -84,6 +102,13 @@
 
 		padding-bottom: 50px
 
+		@media(max-width:1439px)
+			padding-bottom: 30px
+
+		@media (max-width: 1008px)
+			flex-wrap: wrap
+			justify-content: space-between
+
 	&__copy
 		text-align: center
 
@@ -99,20 +124,41 @@
 		@media(max-width:1439px)
 			font-size: 12px
 
+			padding-bottom: 110px
+
+		@media (max-width: 1008px)
+			font-size: 11px
+			padding-bottom: 75px
+
+
+
 .nav_list:nth-child(1)
-		width: 24%
+	width: 24%
+	@media (max-width: 1008px)
+		width: 50%
 
 .nav_list:nth-child(2)
 	width: 21%
+	@media (max-width: 1008px)
+		width: 29%
 
 .nav_list:nth-child(3)
 	width: 23%
+	@media (max-width: 1008px)
+		width: 50%
+		padding-bottom: 0
 
 .nav_list:nth-child(4)
 	width: 19%
+	@media (max-width: 1008px)
+		width: 29%
 
 .nav_list:nth-child(5)
 	width: 13%
+	@media (max-width: 1008px)
+		width: 100%
+		margin-top: -75px
+		padding-bottom: 0
 
 .nav_list
 	color: #fff
@@ -122,7 +168,10 @@
 	@media(max-width:1439px)
 		font-size: 14px
 
-	// width: 20%
+	@media (max-width: 1008px)
+		padding-bottom: 40px
+	
+
 
 
 	&__title

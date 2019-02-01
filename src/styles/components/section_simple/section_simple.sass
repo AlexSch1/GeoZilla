@@ -15,6 +15,10 @@
 		&_head
 			margin-bottom: 25px
 
+			@media(max-width:1008px)
+				padding-top: 170px
+				margin-top: 0
+
 		&_body
 			// 
 
@@ -23,6 +27,9 @@
 
 			@media(max-width:1439px)
 				margin-top: 30px
+
+			@media(max-width:1008px)
+				margin-top: 3px
 
 
 	&__title
@@ -63,13 +70,16 @@
 
 	overflow: hidden
 
+	@media(max-width:1008px)
+		background-position: center top
+		background-size: 164%
+
 	&__title
 		text-align: left
 
 		@media(max-width:1439px)
 			max-width: 232px
-
-			padding-top: 108px
+			padding-top: 150px
 
 	&__content
 		display: -webkit-flex
@@ -98,18 +108,27 @@
 			height: auto
 
 			&_one
-				top: -103px
-				left: 13%
-				width: 749px
+				top: -29px
+				left: 14%
+				width: 483px
 
 				@media(max-width:1439px)
-					width: 504px
+					width: 348px
+					top: -18px
+
+				@media(max-width:1439px)
+					width: 206px
+					top: -4px
+					left: 51%
 
 		
 
 
 .section_child
 	background: url('/static/img/picture/adorable-boy-child-1688253.png') no-repeat right top / cover
+
+	@media(max-width:1008px)
+		padding-bottom: 50px
 
 	&__title
 		text-align: left
@@ -123,9 +142,14 @@
 			max-width: 250px
 			margin-bottom: 10px
 
+		
+
 	&__content_head
 		@media(max-width:1439px)
 			margin-bottom: 15px
+
+		@media(max-width:1008px)
+			padding-top: 25px
 
 	&__text
 		color: #fff
@@ -138,6 +162,9 @@
 			margin-left: 9%
 			max-width: 352px
 
+		@media(max-width:1008px)
+			margin-left: 0
+
 	&__content_footer
 		margin-top: 82px
 		@media(max-width:1439px)
@@ -149,6 +176,9 @@
 	background-image: url('/static/img/picture/adult-aged-bench-1652340.jpg')
 	background-repeat: no-repeat
 	background-size: cover
+
+	@media (max-width: 1008px)
+		padding-bottom: 37px
 	
 	&__content
 		display: -webkit-flex
@@ -161,6 +191,9 @@
 	&__content_footer
 		@media(max-width:1439px)
 			margin-top: 50px
+
+		@media (max-width: 1008px)
+			margin-top: 30px
 
 
 	&__btn
@@ -177,6 +210,9 @@
 		@media(max-width:1439px)
 			padding-top: 153px
 
+		@media (max-width: 1008px)
+			padding-top: 0
+
 	&__text
 		color: #fff
 
@@ -192,12 +228,18 @@
 	@media(max-width:1439px)
 		background-position-x: right
 
+	@media (max-width: 1008px)
+		padding-bottom: 47px
+
 	&__content
 		// 
 
 	&__content_footer
 		@media(max-width:1439px)
 			margin-top: 42px
+
+		@media (max-width: 1008px)
+			margin-top: 28px
 
 	&__title
 		text-align: left
@@ -206,6 +248,9 @@
 		max-width: 308px
 
 		color: #fff
+
+		@media (max-width: 1008px)
+			padding-top: 0
 
 
 
@@ -219,3 +264,6 @@
 		@media(max-width:1439px)
 			max-width: 358px
 			margin-left: 9%
+
+		@media (max-width: 1008px)
+			margin-left: 0

@@ -54,6 +54,10 @@ img, svg {
   @media(max-width:1439px) {
     max-width: 720px;
   }
+
+  @media(max-width:1008px) {
+    max-width: 290px;
+  }
 }
 
 .container {
@@ -85,3 +89,13 @@ img, svg {
 // @media(max-width:1439px)
 // @media(max-width:1023px)
 // @media(max-width:767px)
+
+.hover_text, .nav_list__link {
+  &:hover {
+    text-shadow: 1px 1px 16px rgba(255, 2555, 255, .5);
+  }
+  &:active {
+    text-shadow: initial;
+    opacity: 0.7;
+  }
+}

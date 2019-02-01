@@ -4,7 +4,13 @@
 	color: #fff
 
 	// background-image: linear-gradient(45deg, rgba(17,141,152,1) 0%, rgba(14,163,158,1) 66%, rgba(12,175,161,1) 100%)
-	background-image: linear-gradient(-95deg,#118c98,#0ea39e 66%,#0cafa2)
+	// background-image: linear-gradient(95deg,#118c98,#0ea39e 45%,#0cafa2)
+	background-color: #0da59f
+	background-image: linear-gradient(to top right,rgb(17, 140, 152) 0%,rgb(12, 175, 162) 58.6%)
+	background-image: -webkit-gradient(linear, 0% 100%, 100% 0%,color-stop(0, rgb(17, 140, 152)),color-stop(0.586, rgb(12, 175, 162)))
+	background-image: -ms-linear-gradient(bottom left,rgb(17, 140, 152) 0%,rgb(12, 175, 162) 58.6%)
+	background-image: -webkit-linear-gradient(bottom left,rgb(17, 140, 152) 0%,rgb(12, 175, 162) 58.6%)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0cafa2",endColorstr="#ff118c98",GradientType=0)
 
 	@media(max-width:1439px)
 		padding-bottom: 65px
@@ -28,12 +34,19 @@
 	display: -o-flex
 	display: flex
 	justify-content: center
+
+	@media(max-width:1008px)
+		display: block
 	
 	&__item:first-child
 		margin-left: 15%
 
 		@media(max-width:1439px)
 			margin-left: 9%
+
+		@media(max-width:1008px)
+			margin-left: 0
+			margin-bottom: 40px
 	
 	&__item
 		// border: 1px solid
@@ -41,6 +54,9 @@
 		width: 50%
 		// margin-left: 90px
 		box-sizing: border-box
+
+		@media(max-width:1008px)
+			width: 100%
 
 		&_head
 			display: -webkit-flex
