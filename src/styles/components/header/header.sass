@@ -1,5 +1,14 @@
 .header
-	background: url('/static/img/picture/Hero-Image.jpg') no-repeat top center / cover
+	background-image: url('/static/img/picture/Hero-Image.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+
+	background-position: 58% 8%
+	// background-size: 115% cover
+
+	 // no-repeat top center / cover
 	color: #000
 	font-family: 'Avenir-Medium'
 
@@ -30,7 +39,13 @@
 		background-position: 70%
 		// background-size: 150%
 	@media(max-width:767px)
-		background-position: 75% 0%
+		background-position: 74% 0
+		background-size: 1615px
+
+	@media(max-width:480px)
+		background-position: 68% 0
+
+
 
 		// background-size: 200%
 	&__nav
@@ -46,7 +61,7 @@
 		font-size: 54px
 		font-family: 'Avenir-Black'
 
-		margin: 187px 0 21px 0
+		margin: 156px 0 21px 0
 
 		@media(max-width:1024px)
 			font-size: 38px
@@ -86,7 +101,7 @@
 			width: 50%
 			margin-bottom: 247px
 
-			margin: 0 auto 191px auto
+			margin: 0 auto 235px auto
 			text-align: center
 		
 
@@ -161,4 +176,3 @@
 			height: 45px
 			width: 36px
 
-			
