@@ -1,0 +1,98 @@
+.pricing__header
+	.container_fluid
+		.header__nav.nav.pricing__header_nav
+			.nav__logo
+				img(src="../../../../static/img/icon/logo.png", alt="log").nav__logo_img
+				.nav__bnt
+					a(href="#").nav__log_in.hover_text.color-w Log In
+					.nav__try
+						include ../btn/btn_small/btn
+
+.pricing
+	.p-main
+		img(src="../../../../static/img/picture/Rectangle 2.png", alt="")
+		div
+			.p-main__content
+				.pricing__main
+					.pricing__item
+						p.pricing__item_head.pricing__item_head_color Limited Time Offer
+							span.pricing__item_head_hover
+						.pricing__item_body
+							h2.pricing__item_title 
+								span 7-Day
+								span Free Trial
+							p.pricing__item_text Then $79.99 billed annually, cancel anytime
+						.pricing__item_footer
+							a(href="#").btn.pricing__item_btn get started
+								.btn__hover
+								.btn__active
+					.pricing__item
+						p.pricing__item_head Pay Quarterly
+							span.pricing__item_head_hover
+						.pricing__item_body
+							h2.pricing__item_title 
+								span 3-Month 
+								span Subscription
+							p.pricing__item_text $49.99 billed quarterly, cancel anytime
+
+						.pricing__item_footer
+							a(href="#").btn.pricing__item_btn get started
+								.btn__hover
+								.btn__active
+
+	.p-moddle
+		.container_fluid
+			p.p-moddle__text Subscriptions give your access to all GeoZilla features. You can cancel your subscription at any time.
+			h1.p-moddle__title 
+				span What you get
+				span with GeoZilla Premium
+
+	.p-item
+		.container_fluid
+			.p-item__content
+				.p-item__left.p-item__side
+					.p-item__picture_wr
+						img(src="../../../../static/img/picture/Loc Hist.jpg", alt="").p-item__img
+				.p-item__right.p-item__side
+					p.p-item__title Location History
+					p.p-item__text Use up to 2 weeks of Location History to see what your family’s been up to.
+
+	.p-item.p-item__two
+		.container_fluid
+			.p-item__content.p-item__reverse
+				.p-item__left.p-item__side
+					.p-item__picture_wr
+						img(src="../../../../static/img/picture/Pla Aler.jpg", alt="").p-item__img.p-item__two_img
+				.p-item__right.p-item__side
+					p.p-item__title Place Alerts
+					p.p-item__text Set up Place Alerts to know when family members leave or arrive home, work, or school
+
+	
+	.p-item.p-item__three
+		.container_fluid
+			.p-item__content
+				.p-item__left.p-item__side.p-item__three_left
+					.p-item__picture_wr
+						img(src="../../../../static/img/picture/Sch Aler.jpg ", alt="").p-item__img.p-item__three_img
+				.p-item__right.p-item__side
+					p.p-item__title Schedule Alerts
+					p.p-item__text Set up Schedule Alerts to know if your child arrived to school on time.
+
+	.p-item.p-item__four.p-item__last
+		.container_fluid
+			.p-item__content.p-item__reverse
+				.p-item__left.p-item__side
+					.p-item__picture_wr
+						img(src="../../../../static/img/picture/To-dos.jpg", alt="").p-item__img
+				.p-item__right.p-item__side
+					p.p-item__title To-Do Lists
+					p.p-item__text Assign location-based tasks to pick up milk when your partner passes groceries.
+
+	section.comments.p-stars
+		.container_fluid
+			h2.comments__title.title_section Families love GeoZilla
+			.comments__stars.p-stars__star
+				p.comments__stars_text Over 30,000+ 5-star reviews
+				img(src="../../../../static/img/icon/stars.png", alt="st").comments__stars_img
+			.p-stars__btn
+				include ../btn/btn_main/btn

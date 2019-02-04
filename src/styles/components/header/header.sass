@@ -1,5 +1,5 @@
 .header
-	background: url('/static/img/picture/head_bg.png') no-repeat top center / cover
+	background: url('/static/img/picture/Hero-Image.jpg') no-repeat top center / cover
 	color: #000
 	font-family: 'Avenir-Medium'
 
@@ -8,25 +8,31 @@
 	position: relative
 	z-index: 3
 
-	&::after
-		content: ""
+	// &::after
+	// 	content: ""
 
-		display: block
-		position: absolute
+	// 	display: block
+	// 	position: absolute
 
-		top: 0
-		left: 0
-		height: 100%
-		width: 50%
+	// 	top: 0
+	// 	left: 0
+	// 	height: 100%
+	// 	width: 50%
 
-		z-index: -1
+	// 	z-index: -1
 
-		background-image: linear-gradient(90deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 51.4%)
+	// 	background-image: linear-gradient(90deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 51.4%)
+
+
 
 	@media(max-width:1024px)
 		text-align: center
+		background-position: 70%
+		// background-size: 150%
 	@media(max-width:767px)
-		background-position: 64%
+		background-position: 75% 0%
+
+		// background-size: 200%
 	&__nav
 		padding-top: 20px
 
@@ -46,12 +52,22 @@
 			font-size: 38px
 			line-height: 45px
 
-			margin: 50px auto 10px auto
 			width: 40%
+			margin: 120px auto 10px 0
+
+			text-align: left
+
+			
 
 		@media(max-width:767px)
 			width: 100%
 			margin-top: 40px
+
+			margin: 10px auto 10px auto
+			text-align: center
+
+			
+			
 
 	&__text
 		font-size: 22px
@@ -61,18 +77,29 @@
 		@media(max-width:1024px)
 			font-size: 14px
 			
-			margin: 0 auto 191px auto
+			margin: 0 auto 40px 0
 			width: 20%
+
+			text-align: left
 
 		@media(max-width:767px)
 			width: 50%
-			margin-bottom: 198px
+			margin-bottom: 247px
+
+			margin: 0 auto 191px auto
+			text-align: center
 		
 
 	&__btn
-		padding-bottom: 147px
+		padding-bottom: 180px
+
+		.btn
+			box-shadow: none
 
 		@media(max-width:1024px)
+			padding-bottom: 122px
+
+		@media(max-width:767px)
 			display: -webkit-flex
 			display: -moz-flex
 			display: -ms-flex
@@ -96,6 +123,9 @@
 	color: #000
 
 	@media(max-width:1024px)
+		// 
+
+	@media(max-width:767px)
 		justify-content: center
 		align-items: flex-start
 
@@ -114,6 +144,9 @@
 
 		margin-right: 31px
 
+		&:hover
+			color: #fff
+
 		@media(max-width:1024px)
 			font-size: 13px
 
@@ -127,3 +160,5 @@
 		@media(max-width:1024px)
 			height: 45px
 			width: 36px
+
+			
