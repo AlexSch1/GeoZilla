@@ -35,7 +35,10 @@
 	overflow: hidden
 	outline: none
 
-	&:hover
+	-webkit-appearance: none
+	-webkit-tap-highlight-color: transparent
+
+	&:hover, &:active, &:focus
 		outline: none
 
 
@@ -73,6 +76,9 @@
 		.btn__active
 			background-color: #000
 			opacity: 0.3
+
+			@media(max-width:767px)
+				opacity: 0
 
 		.btn__hover
 			opacity: 0

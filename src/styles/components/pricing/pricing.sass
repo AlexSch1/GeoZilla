@@ -46,6 +46,11 @@
 			height: 40%
 			object-fit: cover
 
+		@media(max-width:350px)
+			max-height: 224px
+			height: 224px
+
+
 	&__content
 		// &::before
 		// 	content: ""
@@ -294,6 +299,9 @@
 	@media(max-width:1024px)
 		height: auto
 
+	&__left 
+		height: 100%
+
 	.container_fluid
 		@media(max-width:767px)
 			padding-left: 38px
@@ -339,6 +347,7 @@
 		@media(max-width:1024px)
 			font-size: 18px
 			line-height: 24px
+			padding-top: 100px
 
 		@media(max-width:767px)
 			text-align: center
@@ -425,8 +434,11 @@
 	&_left
 		padding-left: 13%
 
+		@media(max-width:767px)
+			padding-left: 0
+
 .p-item__four
-	padding-bottom: 170px
+	padding-bottom: 135px
 
 	@media(max-width:1024px)
 		padding-bottom: 65px

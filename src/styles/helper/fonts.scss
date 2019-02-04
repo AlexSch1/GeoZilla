@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'Avenir-Black';
-  src: url('/static/fonts/Avenir/Avenir-Black.ttf');
+  src: url('/static/fonts/Avenir/Avenir-Black.ttf'), url('/static/fonts/Avenir/Avenir-Black.svg'), url('/static/fonts/Avenir/Avenir-Black.woff'), url('/static/fonts/Avenir/Avenir-Black.eot');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Light';
-  src: url('/static/fonts/Avenir/Avenir-Light.ttf');
+  src: url('/static/fonts/Avenir/Avenir-Light.ttf'), url('/static/fonts/Avenir/Avenir-Light.oet'), url('/static/fonts/Avenir/Avenir-Light.svg'), url('/static/fonts/Avenir/Avenir-Light.woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Medium';
-  src: url('/static/fonts/Avenir/Avenir-Medium.ttf');
+  src: url('/static/fonts/Avenir/Avenir-Medium.ttf'), url('/static/fonts/Avenir/Avenir-Medium.woff'), url('/static/fonts/Avenir/Avenir-Medium.svg'), url('/static/fonts/Avenir/Avenir-Medium.eot');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('/static/fonts/Lato/LatoLight.ttf');
+  src: url('/static/fonts/Lato/LatoLight.ttf'), url('/static/fonts/Lato/LatoLight.eot'), url('/static/fonts/Lato/LatoLight.svg'), url('/static/fonts/Lato/LatoLight.woff');
   font-weight: bold;
   font-style: normal;
 }
