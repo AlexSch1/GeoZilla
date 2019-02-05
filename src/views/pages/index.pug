@@ -1,8 +1,9 @@
 extends ../layouts/pages
 block append head
 	block title
-		- var title='Home'; // Page title
-
+		- var title='GeoZilla - Family Safety' // Page title
+	meta(name="keywords" content="family, locator, locater, app, life, phone, parent, 360, parental, safe, guard, base, sygic, iphone, monitor, tracker, lost, locate, my, phone, find, finder, friend, track, tracking, safety, maps, teen, child, iot, wearables, gps, bluetooth, trackr, mojio")
+	meta(name = "apple-itunes-app" content = "app-id = 981856216")
 block content
 	include ../components/header/header
 	include ../components/section_index_main/index_main
@@ -15,3 +16,21 @@ block content
 	include ../components/section_pets/section_pets
 	include ../components/comments/comments
 	include ../components/footer/footer
+	script(type='application/ld+json').
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": "GeoZilla",
+			"url": "https://www.geozilla.com",
+			"sameAs": [
+				"https://twitter.com/geozillaapp",
+				"https://www.instagram.com/geozilla_family/",
+				"https://www.facebook.com/geozillaapp",
+				"https://www.pinterest.com/geozillaapp/",
+				"https://www.flickr.com/photos/138663595@N07/",
+				"https://plus.google.com/100302603577052783245/posts/",
+				"https://www.linkedin.com/company/carrot-rocket-ltd/",
+				"https://www.youtube.com/channel/UC51RebHq9Z78IoGvzWxKmBA/"
+			]
+		}
+
