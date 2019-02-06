@@ -1,0 +1,10 @@
+extends ../layouts/pages
+block append head
+	block title
+		- var title='About Us'; // Page title
+
+block content
+	include ../components/header/header_white
+	include ../components/about_top/about_top
+	include ../components/about_platform/platform
+	include ../components/footer/footer
