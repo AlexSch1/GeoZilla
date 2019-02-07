@@ -1,14 +1,12 @@
 .index_main
-	background-image: url('/static/img/picture/Hero-Image.jpg')
+	// background-image: url('/static/img/picture/Hero-Image.jpg')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
 
 
 	background-position: 58% 8%
-	// background-size: 115% cover
 
-	 // no-repeat top center / cover
 	color: #000
 	font-family: 'Avenir-Medium'
 
@@ -17,20 +15,8 @@
 	position: relative
 	z-index: 3
 
-	// &::after
-	// 	content: ""
 
-	// 	display: block
-	// 	position: absolute
-
-	// 	top: 0
-	// 	left: 0
-	// 	height: 100%
-	// 	width: 50%
-
-	// 	z-index: -1
-
-	// 	background-image: linear-gradient(90deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 51.4%)
+	overflow: hidden
 
 
 
@@ -46,8 +32,44 @@
 		background-position: 68% 0
 
 
+	.container_fluid
+		z-index: 5
 
-		// background-size: 200%
+	.bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+
+		height: auto
+		object-fit: cover
+		z-index: 0
+
+		min-height: 100%
+
+
+		@media(max-width:1024px)
+			left: 50%
+			transform: translate(-50%, 0)
+
+		@media(max-width:767px)
+			width: auto
+			min-height: 541px
+			height: auto
+			left: 50%
+			top: 0%
+			width: 1641px
+			transform: translate(-63%, 0)
+
+
+
 	&__nav
 		padding-top: 20px
 

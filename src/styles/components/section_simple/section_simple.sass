@@ -53,9 +53,10 @@
 
 
 .section_loc
-	background-image: url('/static/img/picture/maps_b-copy-3.png')
+	// background-image: url('/static/img/picture/maps_b-copy-3.png')
 	background-repeat-x: repeat
 	background-repeat-y: no-repeat
+	background-repeat: no-repeat
 	background-position-x: 140%
 
 	overflow: hidden
@@ -64,7 +65,7 @@
 	z-index: 3
 
 	&::after
-		content: ""
+		// content: ""
 
 		display: block
 		position: absolute
@@ -90,6 +91,74 @@
 		background-position: center top
 		background-size: 164%
 		background-size: auto
+
+	.container_fluid
+		z-index: 5
+
+	.bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		&::before
+			content: ""
+
+			display: block
+			position: absolute
+
+			top: 0
+			right: 0
+			height: 100%
+			width: 80%
+
+			z-index: 1
+
+			background-image: linear-gradient(to left,#fff 60%,rgba(0, 0, 0, .01) 91.4%)
+			
+			@media(max-width:767px)
+				width: 100%
+				height: 70%
+				top: initial
+				bottom: 0
+
+				background-image: linear-gradient(to top,#fff 60%,rgba(0, 0, 0, .01) 91.4%)
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: auto
+		// height: 100%
+		// min-height: 660px
+		height: 100%
+		// object-fit: cover
+		z-index: 0
+
+		left: 50%
+		transform: translate(-70%, 0)
+
+		@media(max-width:1440px)
+			// width: 100%
+			// height: auto
+			// object-fit: cover
+			// min-height: 720px
+
+			left: 50%
+			// transform: translate(-80%, 0)
+
+		@media(max-width:1024px)
+			min-height: initial
+			// transform: translate(-50%, 0)
+
+			// width: 100%
+			// height: 100%
+
+		@media(max-width:767px)
+			width: auto
+			min-height: initial
+			height: 100%
+			left: 50%
+			transform: translate(-50%, 0)
 
 
 	&__title
@@ -150,6 +219,8 @@
 	position: relative
 	z-index: 3
 
+	overflow: hidden
+
 	&::after
 		content: ""
 
@@ -165,11 +236,36 @@
 
 		background-image: linear-gradient(to right,rgb(79, 95, 111) 20%,rgba(79, 95, 111, .01) 71.4%)
 
-	background: url('/static/img/picture/adorable-boy-child-1688253.png') no-repeat right top / cover
+	// background: url('/static/img/picture/adorable-boy-child-1688253.png') no-repeat right top / cover
 
 	@media(max-width:767px)
 		padding-bottom: 50px
 		background-position: 72%
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		// height: 100%
+		// min-height: 660px
+		width: 100%
+		height: auto
+		object-fit: cover
+
+		@media(max-width:1440px)
+			width: auto
+			height: 100%
+			object-fit: cover
+
+			left: 50%
+			transform: translate(-50%, 0)
+
+		@media(max-width:767px)
+			width: auto
+			// left: -30%
+			left: 50%
+			transform: translate(-63%, 0)
 
 	&__title
 		text-align: left
@@ -223,8 +319,10 @@
 	position: relative
 	z-index: 3
 
+	overflow: hidden
+
 	&::after
-		content: ""
+		// content: ""
 
 		display: block
 		position: absolute
@@ -234,7 +332,7 @@
 		height: 100%
 		width: 60%
 
-		z-index: -1
+		z-index: 1
 
 		background-image: linear-gradient(to left,rgba(0, 0, 0, .9) 0%,rgba(0, 0, 0, .01) 71.4%)
 
@@ -244,6 +342,61 @@
 	@media (max-width: 767px)
 		padding-bottom: 52px
 		background-position: 39%
+
+	.container_fluid
+		z-index: 5
+
+	.bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		&::before
+			content: ""
+
+			display: block
+			position: absolute
+
+			top: 0
+			right: 0
+			height: 100%
+			width: 60%
+
+			z-index: 1
+
+			background-image: linear-gradient(to left,rgba(0, 0, 0, .9) 0%,rgba(0, 0, 0, .01) 71.4%)
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		// height: 100%
+		// min-height: 660px
+		width: 100%
+		height: auto
+		object-fit: cover
+		z-index: 0
+
+		@media(max-width:1440px)
+			width: 100%
+			height: auto
+			object-fit: cover
+			min-height: 720px
+
+			left: 50%
+			transform: translate(-50%, 0)
+
+		@media(max-width:1024px)
+			min-height: initial
+
+		@media(max-width:767px)
+			width: auto
+			min-height: initial
+			height: 100%
+			left: 50%
+			transform: translate(-50%, 0)
 	
 	&__content
 		display: -webkit-flex
@@ -284,13 +437,13 @@
 			max-width: 306px
 
 .section_pets
-	background: url('/static/img/picture/animal-dog-golden-retriever-9080.png') no-repeat left top / cover
+	// background: url('/static/img/picture/animal-dog-golden-retriever-9080.png') no-repeat left top / cover
 
 	position: relative
 	z-index: 3
 
 	&::after
-		content: ""
+		// content: ""
 
 		display: block
 		position: absolute
@@ -311,6 +464,66 @@
 	@media (max-width: 767px)
 		padding-bottom: 47px
 		background-position: 72%
+
+
+	.container_fluid
+		z-index: 5
+
+	.bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		overflow: hidden
+		&::before
+			content: ""
+
+			display: block
+			position: absolute
+
+			top: 0
+			left: 0
+			height: 100%
+			width: 60%
+
+			z-index: 1
+
+			background-image: linear-gradient(to right,#1e3217 40%,rgba(29, 48, 22, .1) 91.4%)
+			
+			@media(max-width:767px)
+				width: 46%
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		// height: 100%
+		// min-height: 660px
+		width: 100%
+		height: auto
+		object-fit: cover
+		z-index: 0
+
+		@media(max-width:1440px)
+			width: 100%
+			height: 100%
+			object-fit: cover
+			min-height: 720px
+
+			left: 50%
+			transform: translate(-50%, 0)
+
+		@media(max-width:1024px)
+			min-height: initial
+
+		@media(max-width:767px)
+			width: auto
+			min-height: initial
+			height: 100%
+			left: 50%
+			transform: translate(-65%, 0)
 
 	&__content_footer
 		@media(max-width:1024px)
