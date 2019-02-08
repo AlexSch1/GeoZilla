@@ -25,6 +25,8 @@
 				margin-top: 30px
 
 
+
+
 	&__title
 		font-size: 40px
 		line-height: 52px
@@ -222,7 +224,7 @@
 	overflow: hidden
 
 	&::after
-		content: ""
+		// content: ""
 
 		display: block
 		position: absolute
@@ -266,6 +268,12 @@
 			// left: -30%
 			left: 50%
 			transform: translate(-63%, 0)
+
+	&__dimming
+		width: 100%
+		// width: 80%
+		left: 0
+		transform: none
 
 	&__title
 		text-align: left
@@ -353,7 +361,7 @@
 		top: 0
 		left: 0
 		&::before
-			content: ""
+			// content: ""
 
 			display: block
 			position: absolute
@@ -397,6 +405,13 @@
 			height: 100%
 			left: 50%
 			transform: translate(-50%, 0)
+
+	&__dimming
+		width: 100%
+		// width: 80%
+		// height: 100%
+		left: 0
+		transform: scaleX(-1)
 	
 	&__content
 		display: -webkit-flex
@@ -477,7 +492,7 @@
 		left: 0
 		overflow: hidden
 		&::before
-			content: ""
+			// content: ""
 
 			display: block
 			position: absolute
@@ -524,6 +539,13 @@
 			height: 100%
 			left: 50%
 			transform: translate(-65%, 0)
+
+	&__dimming
+		width: 100%
+		// width: 80%
+		// height: 100%
+		left: 0
+		transform: none
 
 	&__content_footer
 		@media(max-width:1024px)
