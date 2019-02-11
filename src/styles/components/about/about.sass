@@ -128,7 +128,7 @@
 
 
 .about
-	background-image: url('/static/img/picture/bg_platform_main2.png')
+	background-image: url('/static/img/picture/about_bg_main.png')
 	background-repeat: no-repeat
 	background-position: top
 	background-size: 100% 
@@ -159,7 +159,7 @@
 	    background-position: 0 125px
 
 	@media(max-width:1024px)
-		background-image: url('/static/img/picture/bg700.png')
+		background-image: url('/static/img/picture/bg700px.png')
 		background-position: top
 		background-size: auto
 
@@ -168,7 +168,7 @@
 		// background-position: -9px -41px
 
 	@media (max-width: 767px)
-		background-image: url('/static/img/picture/bg300.png')
+		background-image: url('/static/img/picture/bg300px.png')
 
 		background-size: auto
 
@@ -383,76 +383,76 @@
 		flex-direction: column
 
 	&_one
-		left: 22.1%
-		bottom: 30.5%
-		@media (max-width: 1440px)
-			left: 22.1%
-			bottom: 27.5%
-		@media (max-width: 1300px)
-			bottom: 26%
-		@media(max-width:1240px)
-			left: 21.6%
-		@media (max-width: 1118px)
-			bottom: 24.5%
+		left: 22.5%
+		bottom: 29.5%
+		// @media (max-width: 1440px)
+		// 	left: 22.1%
+		// 	bottom: 27.5%
+		// @media (max-width: 1300px)
+		// 	bottom: 26%
+		// @media(max-width:1240px)
+		// 	left: 21.6%
+		// @media (max-width: 1118px)
+		// 	bottom: 24.5%
 
-		@media(max-width:1024px)
-			bottom: 42%
-			left: 23.5%
+		// @media(max-width:1024px)
+		// 	bottom: 42%
+		// 	left: 23.5%
 
-		@media (max-width: 870px)
-			bottom: 38%
-			left: 23.5%
+		// @media (max-width: 870px)
+		// 	bottom: 38%
+		// 	left: 23.5%
 
-		@media (max-width: 767px)
-			bottom: 45%
-			left: 29.5%
+		// @media (max-width: 767px)
+		// 	bottom: 45%
+		// 	left: 29.5%
 
-		@media (max-width: 767px)
-			position: static !important
+		// @media (max-width: 767px)
+		// 	position: static !important
 			
-			padding-top: 114px
+		// 	padding-top: 114px
 
 
 	&_two
-		left: 35.5%
-		bottom: 40%
+		left: 35.8%
+		bottom: 38.8%
 
-		@media (max-width: 1440px)
-			left: 35.2%
-			bottom: 37%
+		// @media (max-width: 1440px)
+		// 	left: 35.2%
+		// 	bottom: 37%
 
-		@media (max-width: 1300px)
-			bottom: 35%
+		// @media (max-width: 1300px)
+		// 	bottom: 35%
 
-		@media (max-width: 1118px)
-			bottom: 33.5%
+		// @media (max-width: 1118px)
+		// 	bottom: 33.5%
 
-		@media(max-width:1240px)
-			left: 35%
+		// @media(max-width:1240px)
+		// 	left: 35%
 
-		@media(max-width:1070px)
-			left: 34.7%
+		// @media(max-width:1070px)
+		// 	left: 34.7%
 
 	&_three
-		left: 49.2%
-		bottom: 50%
+		left: 50%
+		bottom: 48.5%
 
 		
-		@media (max-width: 1440px)
+		// @media (max-width: 1440px)
 
-			left: 49%
-			bottom: 47%
+		// 	left: 49%
+		// 	bottom: 47%
 
-		// border: 1px solid
+		// // border: 1px solid
 
-		@media (max-width: 1300px)
-			bottom: 45.5%
+		// @media (max-width: 1300px)
+		// 	bottom: 45.5%
 
-		@media (max-width: 1118px)
-			bottom: 44%
+		// @media (max-width: 1118px)
+		// 	bottom: 44%
 
-		@media(max-width:1240px)
-			left: 48.7%
+		// @media(max-width:1240px)
+		// 	left: 48.7%
 
 
 	&__number
@@ -552,7 +552,7 @@
 		width: 38px
 		height: 38px
 
-		@media (max-width: 767px)
+		@media(max-width:1024px)
 			width: 27px
 			height: 27px
 			
@@ -837,9 +837,7 @@
 		bottom: 0
 		left: 0
 		padding-top: 27%
-		.decore_point__number
-			&::before
-				display: none
+
 
 	.decore_point_two
 		position: relative  !important
@@ -849,9 +847,7 @@
 		padding-left: 8%
 		padding-right: 10%
 		width: 84px
-		.decore_point__number
-			&::before
-				display: none
+
 
 		.decore_point__text
 			width: 86%
@@ -861,13 +857,11 @@
 		position: relative  !important
 		bottom: 4px
 		left: 0
-		.decore_point__number
-			&::before
-				display: none
+
 
 @media (max-width: 767px)
 	.decore_point_one
-		padding-top: 35%
+		padding-top: 39%
 		padding-left: 5%
 
 	.decore_point_two
@@ -877,3 +871,98 @@
 
 	.decore_point_three
 		bottom: 6px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.decore_point_one, .decore_point_two, .decore_point_three
+	.decore_point__number
+		position: relative
+
+		&::before
+			content: ""
+			height: 72px
+			width: 1px
+			position: absolute
+
+			bottom: -58px
+			left: 20px
+			background-color: #06d7ce
+
+		&::after
+			content: ""
+			height: 17px
+			width: 17px
+			position: absolute
+			border-radius: 50%
+			border: 4px solid #fff
+
+			bottom: -84px
+			left: 10px
+			background-color: #06d7ce
+
+
+
+.decore_point_one
+	.decore_point__number
+		&::before
+			height: 56px
+			width: 1px
+
+			bottom: -42px
+			left: 15px
+
+			@media(max-width:1024px)
+				bottom: -90px
+
+		&::after
+			bottom: -69px
+			left: 3px
+
+			@media(max-width:1024px)
+				bottom: -120px
+				
+
+
+
+.decore_point_two
+	.decore_point__number
+		&::after
+			left: 8px
+
+			@media(max-width:1024px)
+				bottom: -156px
+
+		&::before
+			@media(max-width:1024px)
+				bottom: -125px
+			
+
+
+.decore_point_three
+	.decore_point__number
+		&::before
+			width: 1px
+
+			left: 16px
+
+			@media(max-width:1024px)
+				bottom: -103px
+
+		&::after
+			left: 4px	
+
+			@media(max-width:1024px)
+				bottom: -134px	

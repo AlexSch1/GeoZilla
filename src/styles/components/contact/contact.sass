@@ -19,13 +19,14 @@
 			height: 100%
 			width: 100%	
 
-			background: -moz-linear-gradient(93deg, rgba(155,140,204,0.8) 0%, rgba(155,140,204,0.8) 1%, rgba(31,104,154,0.8) 100%) /* ff3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(31,104,154,0.8)), color-stop(99%, rgba(155,140,204,0.8)), color-stop(100%, rgba(155,140,204,0.8))) /* safari4+,chrome */
-			background: -webkit-linear-gradient(93deg, rgba(155,140,204,0.8) 0%, rgba(155,140,204,0.8) 1%, rgba(31,104,154,0.8) 100%) /* safari5.1+,chrome10+ */
-			background: -o-linear-gradient(93deg, rgba(155,140,204,0.8) 0%, rgba(155,140,204,0.8) 1%, rgba(31,104,154,0.8) 100%) /* opera 11.10+ */
-			background: -ms-linear-gradient(93deg, rgba(155,140,204,0.8) 0%, rgba(155,140,204,0.8) 1%, rgba(31,104,154,0.8) 100%) /* ie10+ */
-			background: linear-gradient(357deg, rgba(155,140,204,0.8) 0%, rgba(155,140,204,0.8) 1%, rgba(31,104,154,0.8) 100%) /* w3c */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f689a', endColorstr='#9b8ccc',GradientType=0 ) /* ie6-9 */
+
+			background: -moz-linear-gradient(90deg, rgba(61,200,159,0.8) 0%, rgba(31,104,154,.8) 100%) /* ff3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(31,104,154,.8)), color-stop(100%, rgba(61,200,159,0.8))) /* safari4+,chrome */
+			background: -webkit-linear-gradient(90deg, rgba(61,200,159,0.8) 0%, rgba(31,104,154,.8) 100%) /* safari5.1+,chrome10+ */
+			background: -o-linear-gradient(90deg, rgba(61,200,159,0.8) 0%, rgba(31,104,154,.8) 100%) /* opera 11.10+ */
+			background: -ms-linear-gradient(90deg, rgba(61,200,159,0.8) 0%, rgba(31,104,154,.8) 100%) /* ie10+ */
+			background: linear-gradient(0deg, rgba(61,200,159,0.8) 0%, rgba(31,104,154,.8) 100%) /* w3c */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f689a', endColorstr='#3dc89f',GradientType=0 ) /* ie6-9 */
 		
 		@media(max-width:767px)
 			background-position: 74% 40%
@@ -92,8 +93,14 @@
 .contact_item:first-child
 	margin-left: 0
 
+	@media(max-width:1024px)
+		order: 1
+
 .contact_item:last-child
 	margin-right: 0
+
+	@media(max-width:1024px)
+		order: 2
 
 .contact_item_top
 	position: relative
@@ -168,6 +175,7 @@
 		display: -o-flex
 		display: flex
 		flex-direction: column
+		align-items: center
 
 		padding-bottom: 65px
 
@@ -181,4 +189,15 @@
 		@media(max-width:1024px)
 			font-size: 18px
 			line-height: 24px
+
+	&__btn_wr
+		padding-top: 20px
+		padding-bottom: 38px
+
+	&__btn
+		height: 72px
+		width: 80%
+
+		@media(max-width:1024px)
+			height: 50px
 

@@ -8,20 +8,25 @@ section.contact
 			.contact__box
 				.contact_item
 					.contact_item__head
-						img(src="../../../../static/img/icon/message.svg", alt="").contact_item__img
-					p.contact_item__text For families using GeoZilla, a partnership inquiry or anyone with a general contact request:
-					.contact_item__footer
-						a(href="mailto:info@geozilla.com").contact_item__link info@geozilla.com
-				.contact_item.contact_item_top
-					.contact_item__head
 						img(src="../../../../static/img/icon/settings.svg", alt="").contact_item__img
 					p.contact_item__text For technical support and FAQs on using GeoZilla:
 					.contact_item__footer
 						a(href="#").contact_item__link GeoZilla Support
 						a(href="#").contact_item__link Frequently Asked Questions
+				.contact_item.contact_item_top
+					.contact_item__head
+						img(src="../../../../static/img/icon/message.svg", alt="").contact_item__img
+					p.contact_item__text For families using GeoZilla, a partnership inquiry or anyone with a general contact request:
+					.contact_item__footer.contact_item__btn_wr
+						a(href="#").btn.contact_item__btn.popUpCall(data-pop_up=".send_request") send request
+							.btn__hover
+							.btn__active
 				.contact_item
 					.contact_item__head
 						img(src="../../../../static/img/icon/megaphone.svg", alt="").contact_item__img
 					p.contact_item__text For media inquiries and to contact our press team:
 					.contact_item__footer
 						a(href="mailto:press@geozilla.com").contact_item__link press@geozilla.com
+
+
+

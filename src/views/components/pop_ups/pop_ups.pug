@@ -1,0 +1,105 @@
+.pop_up
+
+	.pop_up__bg
+
+		.pop_up_can_help.pop_up__wr.send_request
+			a(href="#").pop_up__toggle.cross
+			.pop_up__head
+				h6.pop_up__title How can we help you?
+				p.pop_up__descript Please describe your issue in details. 
+
+			.pop_up__body
+				form(action="").pop_up__form
+
+					.pop_up__input_wr
+						span.pop_up__name_input Your e-mail address:
+							span.pop_up__name_input_required *
+						input(type="e-mail" name="e-mail" placeholder="Type your e-mail here").pop_up__field
+						span.pop_up__warm_text.pop_up__warm_text_valid Please use a valid email.
+						span.pop_up__warm_text.pop_up__warm_text_chose Please add your e-mail address so we can help you.
+
+
+
+					.pop_up__input_wr.select__wr
+						span.pop_up__name_input What kind of issue bothers you?
+							span.pop_up__name_input_required *
+						ul.select
+							li
+								input(type="radio" name="problems").select__close#awes-close.default
+								span.select__label.select__label_placeholder Usability problems
+							li.select__items
+								input(type="radio" name="problems").select__expand#awes-opener
+								label(for="awes-close").select__closeLabel
+								ul.select__options
+									li.select__option
+										input(type="radio" name="problems" value="problems1").select__input#sel4
+										label(for="sel4").select__label Privacy lssues
+									//- li.select__option
+									//- 	input(type="radio" name="awes" value="2").select__input#sel5
+									//- 	label(for="sel5").select__label 2
+									//- li.select__option
+									//- 	input(type="radio" name="awes" value="3").select__input#sel6
+									//- 	label(for="sel6").select__label 3
+								label(for="awes-opener").select__expandLabel
+						span.pop_up__warm_text.pop_up__warm_text_chose  Please choose your kind of issue.
+
+
+					.pop_up__input_wr
+						span.pop_up__name_input Your message:
+							span.pop_up__name_input_required *
+						textarea(name="massage", cols="30", rows="6" placeholder="Please include all the details you have in can best assist you. Our Customer Service will respond as soon as possible.").pop_up__field
+						span.pop_up__warm_text.pop_up__warm_text_chose  Please add a message describing your issue so we can help you.
+
+
+
+					.pop_up__input_wr.select__wr
+						span.pop_up__name_input What kind of device are you using GeoZilla on?
+							span.pop_up__name_input_required *
+						ul.select
+							li
+								input(type="radio" name="device").select__close#awes-close2.default
+								span.select__label.select__label_placeholder Usability problems
+							li.select__items
+								input(type="radio" name="device").select__expand#awes-opener2
+								label(for="awes-close2").select__closeLabel
+								ul.select__options
+									li.select__option
+										input(type="radio" name="device" value="device1").select__input#sel41
+										label(for="sel41").select__label Mobile Device - iPhone
+									li.select__option
+										input(type="radio" name="device" value="device2").select__input#sel51
+										label(for="sel51").select__label Mobile Device - Android
+									//- li.select__option
+									//- 	input(type="radio" name="device" value="device3").select__input#sel61
+									//- 	label(for="sel61").select__label Mobile Device - iPhone
+								label(for="awes-opener2").select__expandLabel
+						span.pop_up__warm_text.pop_up__warm_text_chose  Please choose your kind of device.
+
+
+					.pop_up__input_wr
+						span.pop_up__name_input Attach a file to illustrate your issue:
+						label(for="FileAttachment").pop_up__file_label
+							input(type="file" name="FileAttachment").pop_up__field.pop_up__field_file#FileAttachment
+							input(type="text" readonly placeholder="").pop_up__file_name#fileuploadurl
+							span.pop_up__field.pop_up__field_file Attach File
+
+					.pop_up__input_wr.pop_up__input_wr_btn
+						button(type="submit").btn.pop_up__input_btn   send request
+							.btn__hover
+							.btn__active
+							
+
+
+
+
+
+
+			.pop_up__footer
+				p.pop_up__text Like mailers more? Contact us via
+					a(href="mailto:info@geozilla.com").pop_up__link info@geozilla.com.
+
+
+			
+
+				
+					
