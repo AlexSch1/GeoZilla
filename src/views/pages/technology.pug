@@ -1,0 +1,13 @@
+extends ../layouts/pages
+block append head
+	block title
+		- var title='GeoZilla – Technology Behind GeoZilla'; // Page title
+	meta(name="description" content="Powered by ML algorithms and cutting-edge IoT GeoZilla strives to bring family safety to the next level.")
+	
+block content
+	include ../components/header/header
+	include ../components/technology_top/technology_top
+	include ../components/technology_middle/technology_middle
+	include ../components/section_watch/section_watch
+	include ../components/section_trackimo/section_trackimo
+	include ../components/footer/footer

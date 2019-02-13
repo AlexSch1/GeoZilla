@@ -1,0 +1,409 @@
+.technology_top
+	font-family: 'Avenir-Medium'
+
+	overflow: hidden
+
+	&__title
+		padding-top: 195px
+		padding-bottom: 13px
+		padding: 195px 0 13px 0
+
+		font-size: 49px
+
+		@media(max-width:1024px)
+			font-size: 38px
+			line-height: 42px
+			
+			padding: 155px 0 24px 0
+
+	&__descript
+		font-size: 27px
+		line-height: 34px
+		text-align: center
+
+		width: 63%
+		margin: 0 auto
+		padding-bottom: 130px
+
+		@media(max-width:1024px)
+			font-size: 18px
+			line-height: 24px
+
+			width: 65%
+
+		@media(max-width:767px)
+			width: 90%
+
+	&__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		// outline: 1px solid
+
+		@media(max-width:767px)
+			flex-direction: column-reverse
+
+	&__left
+		padding-left: 84px
+
+		@media(max-width:1024px)
+			padding-left: 35px
+
+		@media(max-width:767px)
+			padding-left: 0
+
+	&__side
+		width: 50%
+		// outline: 1px solid
+
+		position: relative
+
+		@media(max-width:767px)
+			width: 100%
+
+		&_title
+			font-size: 49px
+			line-height: 60px
+
+			padding-top: 200px
+			width: 60%
+			padding-bottom: 25px
+
+			@media(max-width:1024px)
+				font-size: 38px
+				line-height: 42px
+
+				padding-top: 65px
+				padding-bottom: 35px
+				width: 70%
+
+			@media(max-width:767px)
+				width: 100%
+				padding-top: 0
+
+		&_text
+			font-size: 18px
+			line-height: 24px
+			font-family: 'Avenir-Light'
+
+			width: 80%
+			padding-bottom: 110px
+
+			@media(max-width:1024px)
+				font-size: 12px
+				line-height: 18px
+
+				padding-bottom: 106px
+
+			@media(max-width:767px)
+				width: 100%
+
+
+		&_img
+			position: absolute
+
+			width: auto
+			height: auto
+
+			width: auto
+			height: auto
+
+			max-width: 1209px
+
+			top: 23px
+			left: -44%
+
+			@media(max-width:1024px)
+				max-width: 729px
+				top: 52px
+				left: -30%
+
+			@media(max-width:767px)
+				position: relative
+
+				max-width: 480px
+
+				top: 0
+				left: -33%
+
+
+
+.technology_middle
+	background-color: #f6f6f6
+
+	overflow: hidden
+
+	@media(max-width:1024px)
+		height: auto
+
+	&__left 
+		height: 100%
+
+	.container_fluid
+		// @media(max-width:767px)
+		// 	padding-left: 38px
+		// 	padding-right: 38px
+
+	&__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		@media(max-width:767px)
+			flex-direction: column-reverse
+
+	&__title
+		font-size: 49px
+		line-height: 60px
+		font-family: 'Avenir-Medium'
+
+		padding-top: 178px
+		padding-bottom: 25px
+
+		@media(max-width:1024px)
+			font-size: 38px
+			line-height: 42px
+			padding-top: 120px
+			padding-bottom: 35px
+
+		@media(max-width:767px)
+			padding-top: 103px
+			padding-bottom: 30px
+			width: 100%
+
+			text-align: left
+
+
+	&__text
+		font-size: 18px
+		line-height: 24px
+		font-family: 'Avenir-Light'
+		max-width: 87%
+
+		@media(max-width:1024px)
+			font-size: 12px
+			line-height: 18px
+
+		@media(max-width:767px)
+			margin: 0
+			padding-bottom: 30px
+			max-width: 95%
+
+			text-align: left
+
+
+	&__img
+		width: auto
+		max-width: 100%
+		height: auto
+		padding-top: 135px
+		padding-left: 48px
+
+		&_first
+			max-width: 85%
+			padding-top: 152px
+
+			@media(max-width:1024px)
+				padding-top: 134px
+
+			@media(max-width:767px)
+				max-width: 100%
+
+		&_secend
+			max-width: 464px
+
+
+
+		&_theerd
+			max-width: 557px
+
+		@media(max-width:1024px)
+			width: 100%
+			// max-width: 87%
+			padding-left: 0
+			// padding-top: 100px
+
+		@media(max-width:767px)
+			padding-top: 0
+
+
+
+
+
+	&__item
+
+		// outline: 1px solid
+
+		.container_fluid
+			@media(max-width:767px)
+				padding: 0
+
+		&_left
+			width: 57%
+
+			@media(max-width:767px)
+				min-height: 229px
+
+		&_right
+			width: 43%
+
+		&_side
+			// outline: 1px solid
+
+			box-sizing: border-box
+
+			@media(max-width:1024px)
+				// 
+
+			@media(max-width:767px)
+				padding: 0
+				width: 100%
+
+		&_reverse
+			flex-direction: row-reverse
+
+			@media(max-width:767px)
+				flex-direction: column-reverse
+
+			.p-item__picture_wr
+				@media(max-width:767px)
+					position: relative
+					min-height: 430px
+
+			&_left
+				width: 43%
+
+				@media(max-width:1024px)
+					width: 52%
+
+				@media(max-width:767px)
+					width: 100%
+
+			&_right
+				width: 57%
+				padding-left: 80px
+
+				@media(max-width:1024px)
+					width: 48%
+					padding-left: 20px
+
+				@media(max-width:767px)
+					width: 100%
+					padding-left: 0
+
+			&_title
+				padding-top: 228px
+				width: 80%
+
+				@media(max-width:1024px)
+					padding-top: 155px
+					width: 90%
+					padding-bottom: 25px
+
+				@media(max-width:767px)
+					width: 100%
+					padding-top: 80px
+					padding-bottom: 25px
+
+
+
+			&_img
+				padding-left: 0px
+				padding-top: 80px
+				margin-left: -88px
+
+				@media(max-width:1024px)
+					padding-top: 66px
+					max-width: 100%
+					margin-left: 0px
+
+				@media(max-width:767px)
+					max-width: 100%
+					padding-top: 0
+					margin: 0
+
+					position: relative
+
+					right: -70px
+
+					position: absolute
+					right: -51px
+					top: -23px
+					max-width: 315px
+					width: auto
+
+		&_three
+			padding-bottom: 37px
+
+			@media(max-width:1024px)
+				padding-bottom: 67px
+
+			@media(max-width:767px)
+				padding-bottom: 62px
+
+			.p-item__picture_wr
+				@media(max-width:767px)
+					position: relative
+					min-height: 335px
+
+			&_left
+				@media(max-width:1024px)
+					width: 57%
+
+				@media(max-width:767px)
+					width: 100%
+
+			&_right
+				@media(max-width:1024px)
+					width: 43%
+
+				@media(max-width:767px)
+					width: 100%
+
+			&_title
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+
+				padding-top: 146px
+
+				@media(max-width:1024px)
+					padding-top: 100px
+
+				@media(max-width:767px)
+					padding-top: 55px
+
+
+
+			&_img
+				padding-top: 0px
+				padding-left: 19px
+
+				@media(max-width:1024px)
+					width: 100%
+					max-width: 100%
+					padding-left: 0px
+					padding-top: 28px
+					margin-left: -15px
+
+				@media(max-width:767px)
+					padding: 0
+					position: absolute
+					right: -21px
+					top: -43px
+					max-width: 342px
+					width: auto
+
+	
+
+
+
+	

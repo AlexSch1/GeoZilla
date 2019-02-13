@@ -128,12 +128,18 @@
 
 
 .about
-	background-image: url('/static/img/picture/about_bg_main.png')
+	// background-image: url('/static/img/other/about_bg_main.png')
+	background-image: url('/static/img/other/ф3.png')
+	
 	background-repeat: no-repeat
-	background-position: top
+	background-position: -1px top
+	// background-position: 0
 	background-size: 100% 
 
 	overflow: hidden
+
+	// background-image: url('/static/img/other/3.png')
+	// background-size: 100%
 
 	// background-size: cover
 	// margin-top: 500px
@@ -147,19 +153,20 @@
 
 	min-height: 2700px
 
-	@media(max-width:1240px)
-		background-position: 0 -13%
 
+	@media(max-width:1440px)
+		background-size: 1440px
 
-	@media(max-width:1179px)
-		background-position: 0 -14%
-		background-size: cover
 
 	@media(max-width:1139px)
-	    background-position: 0 125px
+	    background-position: 0 -28px
+
+	@media(max-width:1080px)
+	    background-position: 0 -52px
 
 	@media(max-width:1024px)
-		background-image: url('/static/img/picture/bg700px.png')
+		// background-image: url('/static/img/other/bg700px.png')
+		background-image: none
 		background-position: top
 		background-size: auto
 
@@ -168,9 +175,69 @@
 		// background-position: -9px -41px
 
 	@media (max-width: 767px)
-		background-image: url('/static/img/picture/bg300px.png')
+		// background-image: url('/static/img/other/bg300px.png')
+		// background-image: url('/static/img/other/2.png')
 
 		background-size: auto
+
+		// background-size: 100%
+		// background-position:  0 0
+	&__bg
+		&_base
+			display: none
+
+		&_desc
+			display: block
+
+			position: absolute
+
+			top: -58px
+			left: 50%
+
+			transform: translate(-50%, 0)
+
+			width: 1048px
+			height: 100%
+
+			z-index: -3
+
+		&_tablet
+
+			@media(max-width:1024px)
+				display: block
+
+				position: absolute
+
+				top: -58px
+				left: 50%
+
+				transform: translate(-50%, 0)
+				
+				width: 1048px
+				height: 100%
+
+				z-index: -3
+
+			@media (max-width: 767px)
+				display: none
+
+		&_mobile
+			@media (max-width: 767px)
+				display: block
+
+				position: absolute
+
+				top: 188px
+				left: 50%
+
+				transform: translate(-50%, 0)
+				
+				width: 756px
+				height: 100%
+
+				z-index: -3
+
+
 
 
 .platform
@@ -185,8 +252,6 @@
 
 	&__side
 		width: 50%
-
-		// border: 1px solid red
 
 		@media (max-width: 767px)
 			width: 100%
@@ -216,8 +281,6 @@
 		@media (max-width: 767px)
 			margin-bottom: 15px
 
-		// box-shadow: $btn_shadow
-
 	&__text
 		font-size: 18px
 		line-height: 24px
@@ -244,6 +307,19 @@
 			position: relative
 			top: -21px
 
+		&_shadow
+			position: absolute
+			top: 30%
+			right: -33%
+
+			width: auto
+			height: auto
+
+			@media(max-width:1024px)
+				display: none
+				top: 30%
+				right: -69%
+
 
 .about__decore_point
 	position: absolute
@@ -258,6 +334,13 @@
 	background-position: top
 	background-size: cover
 
+	@media(max-width:1271px)
+		// top: 73px
+
+	@media(max-width:1080px)
+		top: 19px
+
+
 	@media(max-width:1024px)
 		top: -17px
 
@@ -265,10 +348,6 @@
 		height: auto
 		height: 720px
 		top: 9%
-		top: 9%
-		top: 9%
-		top: 9%
-		// top: 13%
 
 	@media(max-width:1024px)
 		height: auto
@@ -285,7 +364,6 @@
 		min-height: 500px
 		top: 1%
 		top: -1%
-
 
 
 .text_p
@@ -358,6 +436,14 @@
 
 		position: relative
 
+		@media(max-width:1342px)
+			min-height: 627px
+			// top: -100px
+
+		@media(max-width:1239px)
+			min-height: initial
+			top: 0
+
 		@media(max-width:1024px)
 			display: none
 			
@@ -384,75 +470,18 @@
 
 	&_one
 		left: 22.5%
-		bottom: 29.5%
-		// @media (max-width: 1440px)
-		// 	left: 22.1%
-		// 	bottom: 27.5%
-		// @media (max-width: 1300px)
-		// 	bottom: 26%
-		// @media(max-width:1240px)
-		// 	left: 21.6%
-		// @media (max-width: 1118px)
-		// 	bottom: 24.5%
-
-		// @media(max-width:1024px)
-		// 	bottom: 42%
-		// 	left: 23.5%
-
-		// @media (max-width: 870px)
-		// 	bottom: 38%
-		// 	left: 23.5%
-
-		// @media (max-width: 767px)
-		// 	bottom: 45%
-		// 	left: 29.5%
-
-		// @media (max-width: 767px)
-		// 	position: static !important
-			
-		// 	padding-top: 114px
+		bottom: 31%
 
 
 	&_two
 		left: 35.8%
-		bottom: 38.8%
+		bottom: 40%
 
-		// @media (max-width: 1440px)
-		// 	left: 35.2%
-		// 	bottom: 37%
-
-		// @media (max-width: 1300px)
-		// 	bottom: 35%
-
-		// @media (max-width: 1118px)
-		// 	bottom: 33.5%
-
-		// @media(max-width:1240px)
-		// 	left: 35%
-
-		// @media(max-width:1070px)
-		// 	left: 34.7%
 
 	&_three
 		left: 50%
-		bottom: 48.5%
+		bottom: 49.5%
 
-		
-		// @media (max-width: 1440px)
-
-		// 	left: 49%
-		// 	bottom: 47%
-
-		// // border: 1px solid
-
-		// @media (max-width: 1300px)
-		// 	bottom: 45.5%
-
-		// @media (max-width: 1118px)
-		// 	bottom: 44%
-
-		// @media(max-width:1240px)
-		// 	left: 48.7%
 
 
 	&__number
@@ -610,6 +639,8 @@
 
 		@media(max-width:1024px)
 			flex-direction: column
+			align-items: center
+			justify-content: center
 
 
 	&__left
@@ -835,15 +866,15 @@
 	.decore_point_one
 		position: relative !important
 		bottom: 0
-		left: 0
-		padding-top: 27%
+		left: -6px
+		padding-top: 32%
 
 
 	.decore_point_two
 		position: relative  !important
 		bottom: 0
 		left: 0
-		padding-top: 9%
+		padding-top: 12%
 		padding-left: 8%
 		padding-right: 10%
 		width: 84px
@@ -861,11 +892,12 @@
 
 @media (max-width: 767px)
 	.decore_point_one
-		padding-top: 39%
-		padding-left: 5%
+		left: 0
+		padding-top: 50%
+		padding-left: 4%
 
 	.decore_point_two
-		padding-top: 13%
+		padding-top: 17%
 		padding-left: 20px
 		padding-right: 13px
 

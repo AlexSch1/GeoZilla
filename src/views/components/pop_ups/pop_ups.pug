@@ -43,11 +43,15 @@
 								label(for="awes-opener").select__expandLabel
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please choose your kind of issue.
 
-
-					.pop_up__input_wr
+					.pop_up__input_wr.pop_up__input_wr_area
 						span.pop_up__name_input Your message:
 							span.pop_up__name_input_required *
-						textarea(name="massage", cols="30", rows="6" placeholder="Please include all the details you have in can best assist you. Our Customer Service will respond as soon as possible.").pop_up__field
+						//- span#chars 20
+						span#chars2.pop_up__warm_counter 00
+						.ars
+							.bgs
+								//- span.pop_up__name_input Your message:
+							textarea( name="massage", cols="30", minlength="15" maxlength="700"  placeholder="Please include all the details you have in can best assist you. Our Customer Service will respond as soon as possible.").pop_up__field.pop_up__field_area
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please add a message describing your issue so we can help you.
 
 
@@ -75,13 +79,13 @@
 								label(for="awes-opener2").select__expandLabel
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please choose your kind of device.
 
-
-					.pop_up__input_wr
+					.pop_up__input_wr.pop_up__input_wr_file
 						span.pop_up__name_input Attach a file to illustrate your issue:
 						label(for="FileAttachment").pop_up__file_label
 							input(type="file" name="FileAttachment").pop_up__field.pop_up__field_file#FileAttachment
 							input(type="text" readonly placeholder="").pop_up__file_name#fileuploadurl
 							span.pop_up__field.pop_up__field_file Attach File
+							span.pop_up__warm_text.pop_up__warm_text_chose attached file name here
 
 					.pop_up__input_wr.pop_up__input_wr_btn
 						button(type="submit").btn.pop_up__input_btn   send request
@@ -89,13 +93,12 @@
 							.btn__active
 							
 
-
-
-
-
-
 			.pop_up__footer
-				p.pop_up__text Like mailers more? Contact us via
+				p.pop_up__text.pop_up__text_required 
+					span.pop_up__name_input_required * 
+					span.pop_up__text - required fields 
+				p.pop_up__text.pop_up__footer_text Like mailers more?
+				p.pop_up__text.pop_up__footer_text Contact us via
 					a(href="mailto:info@geozilla.com").pop_up__link info@geozilla.com.
 
 
