@@ -1,5 +1,4 @@
 .pop_up
-
 	.pop_up__bg
 
 		.pop_up_can_help.pop_up__wr.send_request
@@ -9,19 +8,19 @@
 				p.pop_up__descript Please describe your issue in details. 
 
 			.pop_up__body
-				form(action="").pop_up__form
+				form( method="post" enctype="multipart/form-data").pop_up__form#ajax-contact-form
 
 					.pop_up__input_wr
 						span.pop_up__name_input Your e-mail address:
 							span.pop_up__name_input_required *
-						input(type="e-mail" name="e-mail" placeholder="Type your e-mail here").pop_up__field
+						input(type="e-mail" name="email" placeholder="Type your e-mail here").pop_up__field
 						span.pop_up__warm_text.pop_up__warm_text_valid Please use a valid email.
 						span.pop_up__warm_text.pop_up__warm_text_chose Please add your e-mail address so we can help you.
 
 
 
 					.pop_up__input_wr.select__wr
-						span.pop_up__name_input What kind of issue bothers you?
+						span.pop_up__name_input What can we help you with?
 							span.pop_up__name_input_required *
 						ul.select
 							li
@@ -32,14 +31,17 @@
 								label(for="awes-close").select__closeLabel
 								ul.select__options
 									li.select__option
-										input(type="radio" name="problems" value="problems1").select__input#sel4
+										input(type="radio" name="problems" value="Privacy lssues").select__input#sel4
 										label(for="sel4").select__label Privacy lssues
-									//- li.select__option
-									//- 	input(type="radio" name="awes" value="2").select__input#sel5
-									//- 	label(for="sel5").select__label 2
-									//- li.select__option
-									//- 	input(type="radio" name="awes" value="3").select__input#sel6
-									//- 	label(for="sel6").select__label 3
+									li.select__option
+										input(type="radio" name="problems" value="Report a bug").select__input#sel6
+										label(for="sel6").select__label Report a bug
+									li.select__option
+										input(type="radio" name="problems" value="Subscriptions").select__input#sel7
+										label(for="sel7").select__label Subscriptions
+									li.select__option
+										input(type="radio" name="problems" value="Business Inquiry").select__input#sel8
+										label(for="sel8").select__label Business Inquiry
 								label(for="awes-opener").select__expandLabel
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please choose your kind of issue.
 
@@ -51,9 +53,8 @@
 						.ars
 							.bgs
 								//- span.pop_up__name_input Your message:
-							textarea( name="massage", cols="30", minlength="15" maxlength="700"  placeholder="Please include all the details you have in can best assist you. Our Customer Service will respond as soon as possible.").pop_up__field.pop_up__field_area
+							textarea( name="message", cols="30", minlength="15" maxlength="700"  placeholder="Please include all the details you have in can best assist you. Our Customer Service will respond as soon as possible.").pop_up__field.pop_up__field_area#message
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please add a message describing your issue so we can help you.
-
 
 
 					.pop_up__input_wr.select__wr
@@ -68,27 +69,30 @@
 								label(for="awes-close2").select__closeLabel
 								ul.select__options
 									li.select__option
-										input(type="radio" name="device" value="device1").select__input#sel41
-										label(for="sel41").select__label Mobile Device - iPhone
+										input(type="radio" name="device" value="deviceIos").select__input#sel41
+										label(for="sel41").select__label iOS
 									li.select__option
-										input(type="radio" name="device" value="device2").select__input#sel51
-										label(for="sel51").select__label Mobile Device - Android
-									//- li.select__option
-									//- 	input(type="radio" name="device" value="device3").select__input#sel61
-									//- 	label(for="sel61").select__label Mobile Device - iPhone
+										input(type="radio" name="device" value="deviceAndroid").select__input#sel51
+										label(for="sel51").select__label Android
+									li.select__option
+										input(type="radio" name="device" value="deviceDevices").select__input#sel61
+										label(for="sel61").select__label Devices
+									li.select__option
+										input(type="radio" name="device" value="deviceNone").select__input#sel61
+										label(for="sel61").select__label None
 								label(for="awes-opener2").select__expandLabel
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please choose your kind of device.
 
 					.pop_up__input_wr.pop_up__input_wr_file
 						span.pop_up__name_input Attach a file to illustrate your issue:
 						label(for="FileAttachment").pop_up__file_label
-							input(type="file" name="FileAttachment").pop_up__field.pop_up__field_file#FileAttachment
+							input(type="file"  name="userfile").pop_up__field.pop_up__field_file#FileAttachment
 							input(type="text" readonly placeholder="").pop_up__file_name#fileuploadurl
 							span.pop_up__field.pop_up__field_file Attach File
 							span.pop_up__warm_text.pop_up__warm_text_chose attached file name here
 
 					.pop_up__input_wr.pop_up__input_wr_btn
-						button(type="submit").btn.pop_up__input_btn   send request
+						button(type="submit" name="submit").btn.pop_up__input_btn   send request
 							.btn__hover
 							.btn__active
 							

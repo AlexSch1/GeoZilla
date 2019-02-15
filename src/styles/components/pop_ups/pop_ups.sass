@@ -131,7 +131,7 @@
 
 		box-sizing: border-box
 
-		z-index: 1
+		z-index: 50
 
 	&__input
 		display: none
@@ -243,7 +243,7 @@
 	height: 100%
 	width: 100%
 	min-height: 100%
-	max-height: 193px
+	max-height: 175px
 	position: absolute
 	bottom: 0px
 	left: 0px
@@ -252,6 +252,7 @@
 	resize: horizontal
 	background-color: transparent
 	border: 0
+	overflow: hidden
 
 	@media(max-width:767px)
 		max-height: 160px
@@ -480,6 +481,8 @@ input[type="file"]
 		transition: opacity .4s ease
 
 		opacity: 0
+
+		z-index: 25
 
 		@media(max-width:767px)
 			font-size: 12px

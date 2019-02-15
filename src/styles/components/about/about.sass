@@ -151,7 +151,7 @@
 
 	z-index: 2
 
-	min-height: 2700px
+	// min-height: 2687px
 
 
 	@media(max-width:1440px)
@@ -301,6 +301,11 @@
 
 	&__phone
 		max-height: 650px
+		position: relative
+		right: -10%
+
+		@media(max-width:1440px)
+			right: -6%
 
 		@media(max-width:1024px)
 			max-height: 487px
@@ -364,13 +369,15 @@
 		min-height: 500px
 		top: 1%
 		top: -1%
+		width: auto
+
 
 
 .text_p
 	@media(max-width:1024px)
 		height: 377px
 
-		width: 63%
+		width: 65%
 		margin: 0 auto
 
 		display: flex
@@ -380,12 +387,14 @@
 		position: absolute
 
 		left: 50%
+		top: 2%
 
 		transform: translate(-50%, 0)
 
 
 	@media(max-width:913px)
 		left: 49.5%
+
 
 	@media(max-width:820px)
 		left: 49%
@@ -404,11 +413,13 @@
 
 		position: absolute
 		left: 51.5%
-		top: 32%
+		top: 33%
+		top: 28%
 
 		transform: translate(-50%, 0)
 
 		width: 292px
+		min-height: 390px
 
 
 
@@ -442,7 +453,7 @@
 
 		@media(max-width:1239px)
 			min-height: initial
-			top: 0
+			// top: 0
 
 		@media(max-width:1024px)
 			display: none
@@ -454,11 +465,20 @@
 	font-family: 'Avenir-Black'
 	position: absolute
 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
 	@media(max-width:1240px)
 		margin-top: 100px
 
 	@media(max-width:1024px)
 		margin-top: 0
+
+		align-items: flex-start
 	
 	@media(max-width:1024px)
 		display: -webkit-flex
@@ -470,29 +490,68 @@
 
 	&_one
 		left: 22.5%
-		bottom: 31%
+		bottom: 38%
+
+		@media(max-width:1640px)
+			left: 22.5%
+			bottom: 39.5%
+
+		@media(max-width:1440px)
+			left: 22.5%
+			bottom: 40%
+
+		@media(max-width:1439px)
+			bottom: 38%
+
+		@media(max-width:1239px)
+			bottom: 39%
 
 
 	&_two
 		left: 35.8%
-		bottom: 40%
+		bottom: 47%
+
+		@media(max-width:1640px)
+			left: 35.8%
+			bottom: 49%
+
+		@media(max-width:1440px)
+			left: 35.8%
+			bottom: 50%
+
+		@media(max-width:1239px)
+			bottom: 52%
 
 
 	&_three
 		left: 50%
-		bottom: 49.5%
+		bottom: 57%
+
+		@media(max-width:1640px)
+			left: 50%
+			bottom: 58.5%
+
+		@media(max-width:1440px)
+			left: 50%
+			bottom: 59.5%
+
+		@media(max-width:1239px)
+			bottom: 61.5%
 
 
 
 	&__number
 		font-size: 60px
-		line-height: 215px
+		line-height: 80px
 
 		position: relative
 
 
+
 		@media(max-width:1024px)
 			line-height: 53px
+
+
 
 	&__text
 		font-family: 'Avenir-Medium'
@@ -500,9 +559,20 @@
 		line-height: 24px
 
 		margin-left: 5px
+		display: block
 
 		@media(max-width:1179px)
 			font-size: 15px
+
+		@media(max-width:1024px)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+
+			line-height: 21px
 
 
 
@@ -646,13 +716,15 @@
 	&__left
 		max-width: 390px
 		color: #fff
+		padding-right: 2%
 
 		@media(max-width:1024px)
 			text-align: center
 			margin: 0 auto
 			max-width: 550px
 			padding-bottom: 60px
-
+			padding-right: 0
+			
 		@media (max-width: 767px)
 			display: block
 
@@ -743,6 +815,14 @@
 				overflow: hidden
 
 				border-radius: 10px
+				max-height: 243px
+
+				.about_gallery__right_img
+					// height: auto
+					width: auto
+
+					@media(max-width:1024px)
+						width: 100%
 
 				@media (max-width: 1115px)
 					width: 49%
@@ -792,10 +872,17 @@
 			height: auto
 			min-height: 223px
 
+			// width: auto
+			height: 100%
+
 			display: block
 
 			@media(max-width:1024px)
 				min-height: 149px
+
+			@media (max-width: 767px)
+				height: 100%
+
 			
 
 
@@ -814,6 +901,20 @@
 	@media (max-width: 767px)
 		padding-top: 91px
 		padding-bottom: 120px
+
+	&__descr
+		font-size: 14px
+
+		width: 41%
+		margin: 0 auto
+		
+		text-align: center
+
+		@media(max-width:1024px)
+			padding-bottom: 10px
+
+		@media (max-width: 767px)
+			width: 100%
 
 	&__text
 		font-size: 27px
@@ -867,7 +968,7 @@
 		position: relative !important
 		bottom: 0
 		left: -6px
-		padding-top: 32%
+		padding-top: 22%
 
 
 	.decore_point_two
@@ -875,7 +976,7 @@
 		bottom: 0
 		left: 0
 		padding-top: 12%
-		padding-left: 8%
+		padding-left: 10%
 		padding-right: 10%
 		width: 84px
 
@@ -893,26 +994,22 @@
 @media (max-width: 767px)
 	.decore_point_one
 		left: 0
-		padding-top: 50%
+		padding-top: 49%
 		padding-left: 4%
+		min-width: 74px
+		width: 74px
+		height: 253px
 
 	.decore_point_two
-		padding-top: 17%
-		padding-left: 20px
+		padding-top: 31%
+		padding-left: 30px
 		padding-right: 13px
+		min-width: 70px
 
 	.decore_point_three
 		bottom: 6px
-
-
-
-
-
-
-
-
-
-
+		left: 26px
+		padding-top: 5%
 
 
 
@@ -948,23 +1045,39 @@
 
 
 .decore_point_one
+	@media(max-width:1439px)
+		.decore_point__text
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+		.decore_point__control
+			margin-top: 40px
+
+	@media(max-width:1024px)
+		.decore_point__control
+			margin-top: 5px
+
+
 	.decore_point__number
 		&::before
 			height: 56px
 			width: 1px
 
 			bottom: -42px
-			left: 15px
+			left: 20px
 
 			@media(max-width:1024px)
-				bottom: -90px
+				bottom: -134px
 
 		&::after
 			bottom: -69px
-			left: 3px
+			left: 8px
 
 			@media(max-width:1024px)
-				bottom: -120px
+				bottom: -164px
 				
 
 
@@ -992,9 +1105,17 @@
 
 			@media(max-width:1024px)
 				bottom: -103px
+				height: 56px
+
+			@media (max-width: 767px)
+				bottom: -126px
+
 
 		&::after
 			left: 4px	
 
 			@media(max-width:1024px)
 				bottom: -134px	
+
+			@media (max-width: 767px)
+				bottom: -157px

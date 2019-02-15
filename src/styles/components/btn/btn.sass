@@ -57,6 +57,8 @@
 		opacity: 0
 		transition: $transition
 
+		border-radius: 80px
+
 	@media(max-width:1024px)
 		width: 220px
 		height: 50px
@@ -130,6 +132,10 @@
 	box-shadow: none
 
 	overflow: visible
+
+
+	&__hover
+		border-radius: 8px
 
 	&__bg
 		position: absolute
@@ -243,10 +249,21 @@
 	&:hover
 		.btn__hover
 			color: #569493
+			opacity: .4
 
 .btn_transp
 	background: transparent
 	color: #fff
 
 	border: 1px solid #fff
+
+	&:hover
+		// text-shadow: 1px 1px 16px hsla(0,0%,100%,1)
+		// box-shadow: 0px 2px 15px 0px rgba(255, 255, 255, .3)
+		// background-color: #00bfa5
+		// border-color: transparent
+
+		@media(max-width:1024px)
+			text-shadow: none
+			box-shadow: none
 

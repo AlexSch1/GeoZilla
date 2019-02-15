@@ -8,7 +8,7 @@ section.about
 		.about__platform.platform
 			.platform__left.platform__side
 				img(src="../../../../static/img/icon/GeoZillaIcon.png", alt="platform").platform__icon
-				.platform__text With over 4 million downloads, backed by 5 years of R&D, and a team of 20 skilled professionals, we are working to make millions of families worldwide safer.
+				.platform__text.text_bold With over 4 million registered users, backed by 5 years of R&D, and processing 1.1B+ locations and events per month, we are working to make millions of families worldwide safer.
 			.platform__right.platform__side
 				img(src="../../../../static/img/other/About-Us-iPhone-Screen.png", alt="phone").platform__phone
 				//- img(src="../../../../static/img/other/About Us iPhone Shadow.png", alt="phoneshadow").platform__phone_shadow
@@ -17,14 +17,19 @@ section.about
 		img(src="../../../../static/img/other/4.png", alt="bg").decore__img_bg.decore__img_bg1
 		.text_p
 			span.decore_point.decore_point_one
-				span.decore_point__number 20
-				span.decore_point__text Employees
-			span.decore_point.decore_point_two
 				span.decore_point__number 4
-				span.decore_point__text + Million Users
+				span.decore_point__control
+					span.decore_point__text + million
+						span  registered 
+					span.decore_point__text users
+			span.decore_point.decore_point_two
+				span.decore_point__number 5
+				span.decore_point__text + years of R&D
 			span.decore_point.decore_point_three
-				span.decore_point__number 11
-				span.decore_point__text Languages
+				span.decore_point__number 1B
+				span.decore_point__control
+					span.decore_point__text + events processed 
+					span.decore_point__text monthly
 	include ../team/team
 	include ../about_gallery/gallery
 	include ../see_position/see_position
