@@ -135,8 +135,8 @@
 			z-index: 1
 
 			@media(max-width:1024px)
-				padding-top: 19px
-				padding-bottom: 19px
+				padding-top: 13px
+				padding-bottom: 13px
 
 				font-size: 18px
 
@@ -194,13 +194,13 @@
 				font-size: 38px
 
 				padding-top: 15px
-				padding-bottom: 20px
+				padding-bottom: 15px
 
 			span
 				line-height: 62px
 
 				@media(max-width:1024px)
-					line-height: 48px
+					line-height: 44px
 
 		&_text
 			font-size: 22px
@@ -258,7 +258,7 @@
 
 		@media(max-width:1024px)
 			padding-top: 39px
-			padding-bottom: 80px
+			padding-bottom: 70px
 
 			font-size: 12px
 
@@ -273,7 +273,7 @@
 
 		// width: 30%
 		margin: 0 auto	
-		padding-bottom: 60px
+		padding-bottom: 67px
 
 		display: -webkit-flex
 		display: -moz-flex
@@ -284,6 +284,8 @@
 
 		@media(max-width:1024px)
 			font-size: 38px
+			line-height: 52px
+			padding-bottom: 50px
 
 		@media(max-width:767px)
 			padding-bottom: 0
@@ -317,24 +319,36 @@
 		@media(max-width:767px)
 			flex-direction: column-reverse
 
+	&__picture_wr
+		@media(max-width:1024px)
+			text-align: right
+
 	
 
 	&__img
 		width: 100%
 		height: auto
-		max-width: 370px
+		max-width: 410px
 
 	&__side
 		width: 50%
 		padding-left: 83px
 		box-sizing: border-box
 
+
 		@media(max-width:1024px)
-			padding-left: 120px
+			padding-left: 0px
 
 		@media(max-width:767px)
 			padding: 0
 			width: 100%
+
+		&_text
+			@media(max-width:1024px)
+				padding-left: 108px
+
+			@media(max-width:767px)
+				padding: 0
 
 	&__title
 		font-size: 40px
@@ -384,6 +398,9 @@
 
 			padding-right: 12%
 
+			@media(max-width:1024px)
+				padding: 0
+
 			@media(max-width:767px)
 				padding: 0
 
@@ -394,7 +411,7 @@
 				@media(max-width:1024px)
 
 					position: relative
-					left: -80px
+					// left: -80px
 
 				@media(max-width:767px)
 					left: 0
@@ -412,6 +429,14 @@
 	@media(max-width:1024px)
 		padding-bottom: 80px
 
+	&__text
+		@media(max-width:1024px)
+			font-size: 18px
+
+	&__img
+		@media(max-width:1024px)
+			margin-top: 7px
+
 	&__btn
 		display: -webkit-flex
 		display: -moz-flex
@@ -423,33 +448,132 @@
 	&__star
 		margin-bottom: 36px
 
+		@media(max-width:1024px)
+			margin-bottom: 27px
+
+
+.p-item__one
+	@media(max-width:1024px)
+		padding-bottom: 35px
+
+		.p-item__title 
+			padding-top: 123px
+
+			@media(max-width:767px)
+				padding-top: 55px
+
+	&_img
+		max-width: 370px
+
+		@media(max-width:1024px)
+			max-width: 270px
 
 .p-item__two
 	padding-bottom: 30px
+
+	@media(max-width:1024px)
+		padding-bottom: 40px
+
+		.p-item__right
+			padding-left: 31px
+
+			@media(max-width:767px)
+				padding-left: 0
+
+		.p-item__picture_wr
+			text-align: left
+			padding-left: 6%
+
+		.p-item__title
+			padding-top: 130px
+			padding-bottom: 10px
+
+			@media(max-width:767px)
+				padding-top: 8px
+
 	@media(max-width:767px)
 		padding-bottom: 0
+
 	&_img
 		max-width: 350px
+		
+		@media(max-width:1024px)
+			max-width: 250px
+
+
 
 .p-item__three
 	padding-bottom: 70px
 
+	@media(max-width:1024px)
+		.p-item__title
+			padding-top: 130px
+			padding-bottom: 10px
+
+			@media(max-width:767px)
+				padding-top: 50px
+
+		padding-bottom: 45px
+
+		
+
+	
+
 	@media(max-width:767px)
 		padding-bottom: 0
+
+
 	&_img
 		max-width: 390px
+
+		@media(max-width:1024px)
+			max-width: 270px
 
 	&_left
 		padding-left: 13%
 
+		@media(max-width:1024px)
+			padding-left: 0
+
 		@media(max-width:767px)
 			padding-left: 0
 
+
+
+
+
 .p-item__four
-	padding-bottom: 135px
+	padding-bottom: 162px
 
 	@media(max-width:1024px)
-		padding-bottom: 65px
+		padding-bottom: 40px
+
+		.p-item__picture_wr
+			text-align: left
+
+		.p-item__title
+			padding-top: 130px
+
+			@media(max-width:767px)
+				padding-top: 50px
+
+		.p-item__reverse .p-item__text, .p-item__reverse .p-item__title
+			padding-left: 45%
+
+			@media(max-width:767px)
+				padding-left: 0
+
+	@media(max-width:767px)
+		padding-bottom: 47px
+
+	&_img
+		max-width: 395px
+
+		@media(max-width:1024px)
+			max-width: 295px
+
+
+		
 
 .pricing + .footer .footer__copy
 	padding-bottom: 100px

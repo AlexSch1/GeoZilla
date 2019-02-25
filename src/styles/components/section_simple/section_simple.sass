@@ -94,17 +94,77 @@
 		background-size: 164%
 		background-size: auto
 
+
+	.bg_icon
+		// position: absolute
+		// width: 100%
+		// height: 100%
+		// z-index: 1
+
+		// // border: 1px solid red
+
+		// // background-image: url('/static/img/icon/Home 1.png')
+		// background-size: 100px 100px
+		// background-repeat: no-repeat
+		// background-position-x: 16%
+
+	&__home
+
+		position: absolute
+		z-index: 3
+		width: 120px
+		height: 125px
+		top: 4%
+		left: 187px
+
+		@media(max-width:1024px)
+			width: 95px
+			height: 100px
+			left: 111px
+			top: 6%
+
+
+		@media(max-width:767px)
+			width: 75px
+			height: 80px
+			left: 255px
+			top: 4%
+
+	&__bg_icon
+		position: absolute
+		z-index: 2
+		width: 483px
+		height: 242px
+		top: 102px
+		left: -220px
+		// left: 385px
+
+		@media(max-width:1024px)
+			width: 444px
+			height: 179px
+			top: 102px
+			left: -270px
+
+		@media(max-width:767px)
+			width: 317px
+			height: 145px
+			top: 82px
+			left: -14px
+
+		// left: 55.3%
+		// transform: translate(-516%, 0)
+
 	.container_fluid
 		z-index: 5
 
-	&__home
-		position: absolute
+	// &__home
+	// 	position: absolute
 
-		left: 13.5%
-		top: 4%
+	// 	left: 13.5%
+	// 	top: 4%
 
-		width: 120px
-		height: 125px
+	// 	width: 120px
+	// 	height: 125px
 
 	.bg
 		position: absolute
@@ -112,6 +172,25 @@
 		height: 100%
 		top: 0
 		left: 0
+
+		// left: -43%
+		// transform: translate(-80%, 0)
+		// @media(max-width:1311px)
+		// 	left: -50%
+
+		// @media(max-width:1220px)
+		// 	left: -60%
+
+		@media(max-width:1092px)
+			left: -14%
+
+		@media(max-width:1024px)
+			left: 0
+
+		@media(max-width:590px)
+			left: -192px
+
+
 		&::before
 			content: ""
 
@@ -121,19 +200,30 @@
 			top: 0
 			right: 0
 			height: 100%
-			width: 80%
+			width: 100%
 
 			z-index: 1
 
 			background-image: linear-gradient(to left,#fff 60%,rgba(0, 0, 0, .01) 91.4%)
+
+			@media(max-width:1092px)
+				right: -14%
+
+			@media(max-width:1024px)
+				right: 0
 			
 			@media(max-width:767px)
 				width: 100%
-				height: 70%
+				height: 100%
 				top: initial
 				bottom: 0
+				
 
 				background-image: linear-gradient(to top,#fff 60%,rgba(0, 0, 0, .01) 91.4%)
+
+			@media(max-width:590px)
+				right: -192px
+
 	&__bg
 		position: absolute
 		top: 0
@@ -145,8 +235,9 @@
 		// object-fit: cover
 		z-index: 0
 
-		left: 50%
-		transform: translate(-70%, 0)
+		left: -600px
+		// left: 0px
+		// transform: translate(-70%, 0)
 
 		@media(max-width:1440px)
 			// width: 100%
@@ -154,22 +245,31 @@
 			// object-fit: cover
 			// min-height: 720px
 
-			left: 50%
+			// left: 50%
 			// transform: translate(-80%, 0)
 
 		@media(max-width:1024px)
 			min-height: initial
 			// transform: translate(-50%, 0)
-
+			left: -548px
 			// width: 100%
 			// height: 100%
 
 		@media(max-width:767px)
 			width: auto
+			// width: 1608px
 			min-height: initial
 			height: 100%
-			left: 50%
-			transform: translate(-50%, 0)
+			left: -486px
+
+			// width: 1149px
+			min-height: 0
+			height: 448px
+			left: -274px
+			// left: 50%
+			// transform: translate(-50%, 0)
+
+
 
 
 	&__title
@@ -206,6 +306,7 @@
 			height: auto
 
 			&_one
+				// display: none
 				top: -36%
 				left: 13%
 				max-width: 751px
@@ -401,12 +502,25 @@
 			height: auto
 			object-fit: cover
 			min-height: 720px
+			min-height: 736px
 
 			left: 50%
 			transform: translate(-50%, 0)
 
+		@media(max-width:1118px)
+			width: auto
+			height: 100%
+
+
+
 		@media(max-width:1024px)
 			min-height: initial
+			width: 100%
+			height: auto
+
+		@media(max-width:845px)
+			width: auto
+			height: 100%
 
 		@media(max-width:767px)
 			width: auto

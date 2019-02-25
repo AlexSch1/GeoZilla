@@ -1,7 +1,14 @@
+'use strict'
+// import LikeButton from './Component/app.js'
+// const React = require('react')
+// const ReactDOM = require('react-dom');
+// const e = React.createElement
+// const domContainer = document.querySelector('#like_button_container')
+// ReactDOM.render(<LikeButton />, domContainer);
 import $ from 'jquery'
 
 $(document).ready(function () {
-  // Open popUp
+  // Call  popUp
   $('.popUpCall').click(function () {
     var popUpName = $(this).data('pop_up')
     popUping(popUpName)
@@ -33,22 +40,21 @@ $(document).ready(function () {
     $(this).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
   })
 
-  // Falidation form
-  $('.btn.pop_up__input_btn').click(function (e) {
-    // -
-  })
+  // Validate Form and Submit
   document.getElementById('ajax-contact-form').addEventListener('submit', function (e) {
     // let targetThis = e.target
-    let state = true
-    e.preventDefault()
+    // let state = true
+    // e.preventDefault()
     $('.select__wr').each(function (i) {
       if ($(this).find('input[type="radio"]:checked').length === 0) {
         $(this).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-        state = false
+        // state = false
+        e.preventDefault()
       } else {
         if ($(this).find('input[type="radio"]:checked').hasClass('default')) {
           $(this).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-          state = false
+          // state = false
+          e.preventDefault()
         }
       }
     })
@@ -57,36 +63,39 @@ $(document).ready(function () {
     if ($(_this).val() === '') {
       $(_this).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
       $(_this).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
-      state = false
+      // state = false
+      e.preventDefault()
     } else {
       if (!validate(_this, trigger)) {
         $(_this).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
-        trigger = false
+        // trigger = false
+        e.preventDefault()
       }
     }
     if ($('.send_request textarea').val() === '') {
       $('.send_request textarea').closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-      state = false
+      // state = false
+      e.preventDefault()
     }
     if (!trigger) return false
-    if (!state) return false
-    var http = new XMLHttpRequest()
-    var f = this
-    var th = $(this)
-    e.preventDefault()
-    http.open('POST', 'contact.php', true)
-    http.onreadystatechange = function () {
-      if (http.readyState === 4 && http.status === 200) {
-        alert(http.responseText)
-        if (http.responseText.indexOf(f.email.value) === 0) {
-          th.trigger('reset')
-        }
-      }
-    }
-    http.onerror = function () {
-      alert('Ошибка, попробуйте еще раз')
-    }
-    http.send(new FormData(f))
+    // if (state) return false
+    // var http = new XMLHttpRequest()
+    // var f = this
+    // var th = $(this)
+    // e.preventDefault()
+    // http.open('POST', 'contact.php', true)
+    // http.onreadystatechange = function () {
+    //   if (http.readyState === 4 && http.status === 200) {
+    //     alert(http.responseText)
+    //     if (http.responseText.indexOf(f.email.value) === 0) {
+    //       th.trigger('reset')
+    //     }
+    //   }
+    // }
+    // http.onerror = function () {
+    //   alert('Ошибка, попробуйте еще раз')
+    // }
+    // http.send(new FormData(f))
   }, false)
 
   // Validator form impus
@@ -180,31 +189,6 @@ $(document).ready(function () {
       $('#chars2').text(decrim)
     }
   })
-  function textAreaAdjust (o) {
-    o.style.height = '1px'
-    var offset = o.offsetHeight - o.clientHeight
-    // o.style.height = (2 + o.scrollHeight) + 'px'
-    $(o).css('height', 'auto').css('height', o.scrollHeight + offset)
-    console.log($(o).height())
-    if (window.innerWidth >= 767) {
-      if ($(o).height() >= 150) {
-        // $('.pop_up__input_wr_area .pop_up__name_input').css('opacity', '0')
-      } else {
-        // $('.pop_up__input_wr_area .pop_up__name_input').css('opacity', '1')
-      }
-    } else {
-      if ($(o).height() >= 144) {
-        // $('.pop_up__input_wr_area .pop_up__name_input').css('opacity', '0')
-      } else {
-        // $('.pop_up__input_wr_area .pop_up__name_input').css('opacity', '1')
-      }
-    }
-  }
-  $('.pop_up__field_area').keyup(function (e) {
-    let EO = this
-    textAreaAdjust(EO)
-  })
-  // -
   // .start_free_trial
   $('.start_free_trial').on('click', function (e) {
     e.preventDefault()
