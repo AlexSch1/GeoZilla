@@ -1,10 +1,3 @@
-'use strict'
-// import LikeButton from './Component/app.js'
-// const React = require('react')
-// const ReactDOM = require('react-dom');
-// const e = React.createElement
-// const domContainer = document.querySelector('#like_button_container')
-// ReactDOM.render(<LikeButton />, domContainer);
 import $ from 'jquery'
 
 $(document).ready(function () {
