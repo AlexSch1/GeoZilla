@@ -6,9 +6,8 @@
 			.pop_up__head
 				h6.pop_up__title How can we help you?
 				p.pop_up__descript Please describe your issue in details. 
-
 			.pop_up__body
-				form( method="post" enctype="multipart/form-data").pop_up__form#ajax-contact-form
+				form( action="#" method="get" enctype="multipart/form-data").pop_up__form#ajax-contact-form
 
 					.pop_up__input_wr
 						span.pop_up__name_input Your e-mail address:
@@ -25,20 +24,23 @@
 						ul.select
 							li
 								input(type="radio" name="problems").select__close#awes-close.default
-								span.select__label.select__label_placeholder Usability problems
+								span.select__label.select__label_placeholder Select your option here
 							li.select__items
 								input(type="radio" name="problems").select__expand#awes-opener
 								label(for="awes-close").select__closeLabel
 								ul.select__options
 									li.select__option
-										input(type="radio" name="problems" value="Privacy lssues").select__input#sel4
-										label(for="sel4").select__label Privacy lssues
+										input(type="radio" name="problems" value="How it works").select__input#sel4
+										label(for="sel4").select__label How it works
 									li.select__option
-										input(type="radio" name="problems" value="Report a bug").select__input#sel6
-										label(for="sel6").select__label Report a bug
+										input(type="radio" name="problems" value="Improvement suggestion").select__input#sel5
+										label(for="sel5").select__label Improvement suggestion
 									li.select__option
-										input(type="radio" name="problems" value="Subscriptions").select__input#sel7
-										label(for="sel7").select__label Subscriptions
+										input(type="radio" name="problems" value="Subscriptions").select__input#sel6
+										label(for="sel6").select__label Subscriptions	
+									li.select__option
+										input(type="radio" name="problems" value="Report a bug").select__input#sel7
+										label(for="sel7").select__label Report a bug
 									li.select__option
 										input(type="radio" name="problems" value="Business Inquiry").select__input#sel8
 										label(for="sel8").select__label Business Inquiry
@@ -46,14 +48,17 @@
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please choose your kind of issue.
 
 					.pop_up__input_wr.pop_up__input_wr_area
-						span.pop_up__name_input Your message:
+						span.pop_up__name_input
+							span.pop_up__name_input_hide_wr
+								span.pop_up__name_input_hide
+								span.pop_up__name_input_hide2  Your message:
 							span.pop_up__name_input_required *
 						//- span#chars 20
 						span#chars2.pop_up__warm_counter 00
 						.ars
 							.bgs
 								//- span.pop_up__name_input Your message:
-							textarea( name="message", cols="30", minlength="15" maxlength="700"  placeholder="Please include all the details you have in can best assist you. Our Customer Service will respond as soon as possible.").pop_up__field.pop_up__field_area#message
+							textarea(data-mcs-theme="dark", name="message", cols="30", minlength="15" maxlength="700"  placeholder="Please include all the details you have in can best assist you. Our Customer Service will respond as soon as possible.").pop_up__field.pop_up__field_area#message
 						span.pop_up__warm_text.pop_up__warm_text_chose  Please add a message describing your issue so we can help you.
 
 
@@ -63,7 +68,7 @@
 						ul.select
 							li
 								input(type="radio" name="device").select__close#awes-close2.default
-								span.select__label.select__label_placeholder Usability problems
+								span.select__label.select__label_placeholder Select your option here
 							li.select__items
 								input(type="radio" name="device").select__expand#awes-opener2
 								label(for="awes-close2").select__closeLabel

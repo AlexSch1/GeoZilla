@@ -352,7 +352,7 @@
 		min-height: 300px
 		height: auto
 		height: 720px
-		top: 9%
+		top: 8%
 
 	@media(max-width:1024px)
 		height: auto
@@ -714,16 +714,20 @@
 
 
 	&__left
-		max-width: 390px
+		// max-width: 390px
+		width: 35%
 		color: #fff
 		padding-right: 2%
 
+
 		@media(max-width:1024px)
 			text-align: center
+
 			margin: 0 auto
 			max-width: 550px
 			padding-bottom: 60px
 			padding-right: 0
+			width: 100%
 			
 		@media (max-width: 767px)
 			display: block
@@ -774,8 +778,11 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
+		align-content: flex-start
 
-		max-width: 677px
+		// max-width: 677px
+		width: 60%
+
 
 		@media(max-width:1024px)
 			width: 100%
@@ -817,9 +824,11 @@
 				border-radius: 10px
 				max-height: 243px
 
+				
+
 				.about_gallery__right_img
 					// height: auto
-					width: auto
+					// width: auto
 
 					@media(max-width:1024px)
 						width: 100%
@@ -861,11 +870,21 @@
 
 			border-radius: 10px
 
+			min-height: 315px
+			height: 315px
+
+			overflow: hidden
+			position: relative
+
+
 			@media(max-width:1024px)
 				border-radius: 0
 
 			@media (max-width: 767px)
 				margin-bottom: 25px
+				min-height: 196px
+				height: 196px
+
 
 		&_img
 			width: 100%
@@ -877,11 +896,28 @@
 
 			display: block
 
+
+
 			@media(max-width:1024px)
 				min-height: 149px
 
 			@media (max-width: 767px)
-				height: 100%
+				height: auto
+
+				min-height: 196px
+
+			&_base
+				height: 315px
+				width: auto
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translate(-50%, 0)
+				border-radius: 10px
+
+				@media (max-width: 767px)
+					border-radius: 10px
+					height: 196px
 
 			
 
@@ -903,15 +939,16 @@
 		padding-bottom: 120px
 
 	&__descr
-		font-size: 14px
+		font-size: 27px
 
-		width: 41%
+		width: 80%
 		margin: 0 auto
 		
 		text-align: center
 
 		@media(max-width:1024px)
 			padding-bottom: 10px
+			font-size: 18px
 
 		@media (max-width: 767px)
 			width: 100%

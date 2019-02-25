@@ -227,6 +227,9 @@
 	border: 1px solid #8a8a8a
 	border-radius: 5px
 
+	
+
+
 	// &::before
 		// content: ''
 		// position: absolute
@@ -253,6 +256,7 @@
 	background-color: transparent
 	border: 0
 	overflow: hidden
+
 
 	@media(max-width:767px)
 		max-height: 160px
@@ -401,6 +405,10 @@ input[type="file"]
 			align-items: flex-end
 			margin-bottom: 48px
 
+			@media(max-width:767px)
+				align-items: center
+
+
 	&__input_btn
 		width: 283px
 		height: 72px
@@ -445,14 +453,33 @@ input[type="file"]
 
 		padding-bottom: 5px
 
+
 		@media(max-width:767px)
 			font-size: 12px
 
 			width: 80%
 
+		&_hide_wr
+			position: relative
+
+		
+		&_hide
+			box-shadow: 0px 0px 18px 15px rgba(255,255,255,1)
+
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			background-color: white
+			height: 1px
+
+
+		&_hide2
+			position: relative
 
 		&_required 
 			color: #ff4258
+			position: relative
 
 	&__warm_counter
 		color: #ff4258
