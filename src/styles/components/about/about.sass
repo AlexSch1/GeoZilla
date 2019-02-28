@@ -5,42 +5,6 @@
 
 	overflow: hidden
 
-	// .container_fluid
-	// 	z-index: 5
-
-	// .bg
-	// 	position: absolute
-	// 	width: 100%
-	// 	height: 100%
-	// 	top: 0
-	// 	left: 0
-
-	// &__bg
-	// 	position: absolute
-	// 	top: -45%
-	// 	left: 0
-	// 	width: 100%
-
-	// 	height: auto
-	// 	// object-fit: cover
-	// 	z-index: 0
-
-	// 	min-height: 100%
-
-
-	// 	@media(max-width:1024px)
-	// 		left: 50%
-	// 		transform: translate(-50%, 0)
-
-	// 	@media(max-width:767px)
-	// 		width: auto
-	// 		min-height: 541px
-	// 		height: auto
-	// 		left: 50%
-	// 		top: 0%
-	// 		width: 1641px
-	// 		transform: translate(-63%, 0)
-
 	&__wr
 		background-image: url('/static/img/picture/GeoZilla-Family-Friends-GPS-Locator-All.jpg')
 		background-repeat: no-repeat
@@ -880,6 +844,9 @@
 			@media(max-width:1024px)
 				border-radius: 0
 
+				min-height: 320px
+				height: 320px
+
 			@media (max-width: 767px)
 				margin-bottom: 25px
 				min-height: 196px
@@ -890,9 +857,10 @@
 			width: 100%
 			height: auto
 			min-height: 223px
+			min-height: auto
 
 			// width: auto
-			height: 100%
+			// height: 100%
 
 			display: block
 
@@ -905,6 +873,9 @@
 				height: auto
 
 				min-height: 196px
+				
+				// min-height: auto
+
 
 			&_base
 				height: 315px
@@ -914,6 +885,9 @@
 				left: 50%
 				transform: translate(-50%, 0)
 				border-radius: 10px
+
+				@media(max-width:1024px)
+					height: 320px
 
 				@media (max-width: 767px)
 					border-radius: 10px

@@ -7,7 +7,10 @@
 				.nav__bnt
 					a(href="#").nav__log_in.hover_text.color-w Log In
 					.nav__try
-						include ../btn/btn_small/btn
+						a(href="#", onclick="gtag('config', 'Try_Geozilla_Price');").btn.btn_small.start_free_trial Try GeoZilla
+							.btn__active.btn_small__active
+							.btn__hover.btn_small__hover
+							.btn_small__bg 
 
 .pricing
 	.p-main
@@ -24,7 +27,7 @@
 								span Free Trial
 							p.pricing__item_text Then $79.99 billed annually, cancel anytime
 						.pricing__item_footer
-							a(href="#").btn.pricing__item_btn.start_free_trial get started
+							a(href="#" onclick="gtag('config', 'Get_Started_Annual');").btn.pricing__item_btn.start_free_trial get started
 								.btn__hover
 								.btn__active
 					.pricing__item
@@ -37,7 +40,7 @@
 							p.pricing__item_text $49.99 billed quarterly, cancel anytime
 
 						.pricing__item_footer
-							a(href="#").btn.pricing__item_btn.start_free_trial get started
+							a(href="#" onclick="gtag('config', 'Get_Started_Quarterly');").btn.pricing__item_btn.start_free_trial get started
 								.btn__hover
 								.btn__active
 
@@ -96,4 +99,6 @@
 				p.comments__stars_text.p-stars__text Over 30,000+ 5-star reviews
 				img(src="../../../../static/img/icon/stars.png", alt="st").comments__stars_img.p-stars__img
 			.p-stars__btn.start_free_trial
-				include ../btn/btn_main/btn
+				a(href="/plans.html" onclick="gtag('config', 'Start_Trial_Bottom_Price');").btn start free trial
+					.btn__hover
+					.btn__active

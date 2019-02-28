@@ -5,8 +5,12 @@ block append head
 	meta(name="description" content="GeoZilla is your family safety app. Locate loved ones on a map and keep each other safe even when miles apart.")
 	meta(name="keywords" content="family, locator, locater, app, life, phone, parent, 360, parental, safe, guard, base, sygic, iphone, ios, android, monitor, tracker, lost, locate, my, phone, find, finder, friend, track, tracking, safety, maps, teen, child, iot, wearables, gps, Apple Watch, map")
 	meta(name = "apple-itunes-app" content = "app-id = 981856216")
+
+
+
 block content
 	include ../components/header/header
+	+header("gtag('config', 'Try_Geozilla_Home_Page');")
 	include ../components/section_index_main/index_main
 	include ../components/mission/mission
 	include ../components/apps/apps
@@ -34,4 +38,5 @@ block content
 				"https://www.youtube.com/channel/UC51RebHq9Z78IoGvzWxKmBA/"
 			]
 		}
+
 

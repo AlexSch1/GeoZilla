@@ -1,11 +1,12 @@
 extends ../layouts/pages
 block append head
 	block title
-		- var title='GeoZilla – Learn More About Us'; // Page title
+		- var title='Learn more about our safety solutions, our vision and our team.'; // Page title
 	meta(name="description" content="Meet our team and see what drives us here at GeoZilla, your family safety app.")
 	
 block content
 	include ../components/header/header_white
+	+headerWhite("gtag('config', 'Try_Geozilla_About');")
 	include ../components/about_top/about_top
 	include ../components/about_platform/platform
 	include ../components/footer/footer

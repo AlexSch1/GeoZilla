@@ -1,11 +1,15 @@
-header.header
-	.container_fluid
-		.header__nav.nav
-			.nav__logo
-				a(href="/").nav__link
-					img(src="../../../../static/img/icon/GeoZilla-LOGO.png", alt="logo").nav__logo_img
-			.nav__bnt
-				a(href="#").nav__log_in.hover_text.color-w Log In
-				.nav__try.color-w
-					include ../btn/btn_small/btn
+mixin headerWhite(gtag)
+	header.header
+		.container_fluid
+			.header__nav.nav
+				.nav__logo
+					a(href="/").nav__link
+						img(src="../../../../static/img/icon/GeoZilla-LOGO.png", alt="logo").nav__logo_img
+				.nav__bnt
+					a(href="#").nav__log_in.hover_text.color-w Log In
+					.nav__try.color-w
+						a(href="#", onclick=gtag).btn.btn_small.start_free_trial Try GeoZilla
+							.btn__active.btn_small__active
+							.btn__hover.btn_small__hover
+							.btn_small__bg 
 

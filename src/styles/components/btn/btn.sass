@@ -257,6 +257,18 @@
 
 	border: 1px solid #fff
 
+	&:active
+		.btn__active
+			background-color: #000
+			opacity: 0.2
+			z-index: 12
+
+			@media(max-width:767px)
+				opacity: 0
+
+		.btn__hover
+			opacity: 0
+
 	&:hover
 		// text-shadow: 1px 1px 16px hsla(0,0%,100%,1)
 		// box-shadow: 0px 2px 15px 0px rgba(255, 255, 255, .3)
@@ -266,4 +278,7 @@
 		@media(max-width:1024px)
 			text-shadow: none
 			box-shadow: none
+
+		.btn__hover
+			opacity: .2
 

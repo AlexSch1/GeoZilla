@@ -1,11 +1,10 @@
-'use strict'
 // import LikeButton from './Component/app.js'
-// const React = require('react')
-// const ReactDOM = require('react-dom');
-// const e = React.createElement
-// const domContainer = document.querySelector('#like_button_container')
-// ReactDOM.render(<LikeButton />, domContainer);
 import $ from 'jquery'
+// const React = require('react')
+// const ReactDOM = require('react-dom')
+// const e = React.createElement
+// const domContainer = document.querySelector('.index_main__title')
+// ReactDOM.render(<LikeButton />, domContainer)
 
 $(document).ready(function () {
   // Call  popUp
@@ -35,7 +34,7 @@ $(document).ready(function () {
   }
 
   // Destore invalid text on form
-  $('.send_request [name="email"], .send_request textarea, .select__wr').on('click', function () {
+  $('.send_request [name="email"], .send_request textarea, .select__wr, .send_request [name="id"]').on('click', function () {
     $(this).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').removeClass('pop_up__warm_text_no_choose')
     $(this).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
   })
@@ -59,17 +58,30 @@ $(document).ready(function () {
       }
     })
     var trigger = true
-    var _this = $('.send_request [name="email"]')
-    if ($(_this).val() === '') {
-      $(_this).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-      $(_this).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
+    var field_mail = $('.send_request [name="email"]')
+    if ($(field_mail).val() === '') {
+      $(field_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
+      $(field_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
       // state = false
       e.preventDefault()
     } else {
-      if (!validate(_this, trigger)) {
-        $(_this).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
+      if (!validate(field_mail, trigger)) {
+        $(field_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
         // trigger = false
         e.preventDefault()
+      }
+    }
+    var field_id_mail = $('.send_request [name="id"]')
+    if ($(field_id_mail).val() === '') {
+      $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
+      $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
+      e.preventDefault()
+    } else {
+      if (!validateID(field_id_mail, trigger)) {
+        $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
+        e.preventDefault()
+      } else {
+        $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
       }
     }
     if ($('.send_request textarea').val() === '') {
@@ -78,26 +90,27 @@ $(document).ready(function () {
       e.preventDefault()
     }
     if (!trigger) return false
-    // if (state) return false
-    // var http = new XMLHttpRequest()
-    // var f = this
-    // var th = $(this)
-    // e.preventDefault()
-    // http.open('POST', 'contact.php', true)
-    // http.onreadystatechange = function () {
-    //   if (http.readyState === 4 && http.status === 200) {
-    //     alert(http.responseText)
-    //     if (http.responseText.indexOf(f.email.value) === 0) {
-    //       th.trigger('reset')
-    //     }
-    //   }
-    // }
-    // http.onerror = function () {
-    //   alert('Ошибка, попробуйте еще раз')
-    // }
-    // http.send(new FormData(f))
   }, false)
 
+  // Validator id email
+  function validateID (_this, trigger) {
+    var ckName = /^[А-Яа-яA-Za-z\s]{1,20}$/
+    var ckText = /^[А-Яа-яA-Za-z0-9,.!?\s]{1,5000}$/
+    var ckTel = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+    var ckNumber = /^\d+$/
+    var ckDate = /^(\d{1,2}).(\d{1,2}).(\d{2}|\d{4})$/
+    var ckEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+    var type = true
+    if (type) {
+      if (!ckEmail.test($(_this).val())) {
+        return false
+      } else {
+        return true
+      }
+    } else {
+      return true
+    }
+  }
   // Validator form impus
   function validate (_this, trigger) {
     var ckName = /^[А-Яа-яA-Za-z\s]{1,20}$/
@@ -153,7 +166,15 @@ $(document).ready(function () {
       return true
     }
   }
-
+  function textAreaAdjust (o) {
+    o.style.height = '1px'
+    var offset = o.offsetHeight - o.clientHeight
+    $(o).css('height', 'auto').css('height', o.scrollHeight + offset)
+  }
+  $('.pop_up__field_area').keyup(function (e) {
+    let EO = this
+    textAreaAdjust(EO)
+  })
   // characters
   let maxlength = 700
   let counter = 50
