@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import LikeButton from './Component/app.js'
 import $ from 'jquery'
 // const React = require('react')
@@ -5,6 +6,9 @@ import $ from 'jquery'
 // const e = React.createElement
 // const domContainer = document.querySelector('.index_main__title')
 // ReactDOM.render(<LikeButton />, domContainer)
+=======
+import $ from 'jquery'
+>>>>>>> fbbab4aea866e3641fb0ba2017b1148753e2db28
 
 $(document).ready(function () {
   // Call  popUp
