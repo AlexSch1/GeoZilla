@@ -8,33 +8,43 @@
 
 
 <url>
-  <loc>http://geo.h-w-h-p.digital/</loc>
-  <lastmod>2019-02-15T10:56:16+00:00</lastmod>
+  <loc>https://geozilla.com/</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://geo.h-w-h-p.digital/pricing.html</loc>
-  <lastmod>2019-02-15T10:56:16+00:00</lastmod>
+  <loc>https://geozilla.com/plans.html</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://geo.h-w-h-p.digital/about.html</loc>
-  <lastmod>2019-02-15T10:56:16+00:00</lastmod>
+  <loc>https://geozilla.com/about.html</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://geo.h-w-h-p.digital/contact.html</loc>
-  <lastmod>2019-02-15T10:56:16+00:00</lastmod>
+  <loc>https://geozilla.com/contact.html</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://geo.h-w-h-p.digital/technology.html</loc>
-  <lastmod>2019-02-15T10:56:16+00:00</lastmod>
+  <loc>https://geozilla.com/technology.html</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://geo.h-w-h-p.digital/index.html</loc>
-  <lastmod>2019-02-15T10:56:16+00:00</lastmod>
+  <loc>https://geozilla.com/privacy-policy.html</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://geozilla.com/terms-of-use.html</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://geozilla.com/index.html</loc>
+  <lastmod>2019-02-21T10:11:08+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

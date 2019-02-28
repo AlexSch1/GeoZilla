@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import LikeButton from './Component/app.js'
 import $ from 'jquery'
 // const React = require('react')
@@ -6,9 +5,6 @@ import $ from 'jquery'
 // const e = React.createElement
 // const domContainer = document.querySelector('.index_main__title')
 // ReactDOM.render(<LikeButton />, domContainer)
-=======
-import $ from 'jquery'
->>>>>>> fbbab4aea866e3641fb0ba2017b1148753e2db28
 
 $(document).ready(function () {
   // Call  popUp
@@ -62,30 +58,30 @@ $(document).ready(function () {
       }
     })
     var trigger = true
-    var field_mail = $('.send_request [name="email"]')
-    if ($(field_mail).val() === '') {
-      $(field_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-      $(field_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
+    var fieldMmail = $('.send_request [name="email"]')
+    if ($(fieldMmail).val() === '') {
+      $(fieldMmail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
+      $(fieldMmail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
       // state = false
       e.preventDefault()
     } else {
-      if (!validate(field_mail, trigger)) {
-        $(field_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
+      if (!validate(fieldMmail, trigger)) {
+        $(fieldMmail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
         // trigger = false
         e.preventDefault()
       }
     }
-    var field_id_mail = $('.send_request [name="id"]')
-    if ($(field_id_mail).val() === '') {
-      $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-      $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
+    var fieldIdMail = $('.send_request [name="id"]')
+    if ($(fieldIdMail).val() === '') {
+      $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
+      $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
       e.preventDefault()
     } else {
-      if (!validateID(field_id_mail, trigger)) {
-        $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
+      if (!validateID(fieldIdMail, trigger)) {
+        $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
         e.preventDefault()
       } else {
-        $(field_id_mail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
+        $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
       }
     }
     if ($('.send_request textarea').val() === '') {
@@ -98,11 +94,6 @@ $(document).ready(function () {
 
   // Validator id email
   function validateID (_this, trigger) {
-    var ckName = /^[А-Яа-яA-Za-z\s]{1,20}$/
-    var ckText = /^[А-Яа-яA-Za-z0-9,.!?\s]{1,5000}$/
-    var ckTel = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
-    var ckNumber = /^\d+$/
-    var ckDate = /^(\d{1,2}).(\d{1,2}).(\d{2}|\d{4})$/
     var ckEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
     var type = true
     if (type) {
