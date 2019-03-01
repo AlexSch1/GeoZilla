@@ -250,4 +250,9 @@ $(document).ready(function () {
     if (navigator.appVersion.indexOf('Linux') !== -1) curOS = 'Linux'
     return curOS
   }
+
+  $('.cookies__close').on('click', function (e) {
+    e.preventDefault()
+    $('.cookies').addClass('cookies-close')
+  })
 })
