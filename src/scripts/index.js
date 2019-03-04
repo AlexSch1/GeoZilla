@@ -41,18 +41,13 @@ $(document).ready(function () {
 
   // Validate Form and Submit
   document.getElementById('ajax-contact-form').addEventListener('submit', function (e) {
-    // let targetThis = e.target
-    // let state = true
-    // e.preventDefault()
     $('.select__wr').each(function (i) {
       if ($(this).find('input[type="radio"]:checked').length === 0) {
         $(this).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-        // state = false
         e.preventDefault()
       } else {
         if ($(this).find('input[type="radio"]:checked').hasClass('default')) {
           $(this).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-          // state = false
           e.preventDefault()
         }
       }
@@ -62,7 +57,6 @@ $(document).ready(function () {
     if ($(fieldMmail).val() === '') {
       $(fieldMmail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
       $(fieldMmail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
-      // state = false
       e.preventDefault()
     } else {
       if (!validate(fieldMmail, trigger)) {
@@ -86,7 +80,6 @@ $(document).ready(function () {
     // }
     if ($('.send_request textarea').val() === '') {
       $('.send_request textarea').closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-      // state = false
       e.preventDefault()
     }
     if (!trigger) return false
