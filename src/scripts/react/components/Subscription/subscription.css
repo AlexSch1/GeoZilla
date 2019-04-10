@@ -1,6 +1,20 @@
 .p_subscr {
     max-width: 560px;
     padding: 0 58px;
+    animation: fadeInS .5s ease both;
+
+}
+
+@keyframes fadeInS {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
     .pop_up__title {
