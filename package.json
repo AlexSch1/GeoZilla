@@ -60,11 +60,18 @@
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "braintree-web-drop-in": "^1.17.1",
     "custom-scrollbar": "0.0.2",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9",
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "react-input-mask": "^2.0.4",
+    "react-redux": "^7.0.1",
+    "react-text-mask": "^5.4.3",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "engines": {
     "node": ">= 8.1.3",

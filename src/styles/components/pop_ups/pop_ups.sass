@@ -579,7 +579,11 @@ input[type="file"]
 
 	background-color: #fff
 
-	animation: cookiesLoad .6s linear both 1s
+	transform: translateY(-120%)
+
+	&-open
+		animation: cookiesOpen .6s linear both 1s
+
 
 	&-close
 		animation: cookiesClose .5s ease both
@@ -638,7 +642,7 @@ input[type="file"]
 			right: 20px
 
 
-@keyframes cookiesLoad
+@keyframes cookiesOpen
 	0%
 		visibility: visibility
 		z-index: 10

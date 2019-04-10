@@ -1,0 +1,310 @@
+.p_subscr {
+    max-width: 560px;
+    padding: 0 58px;
+}
+
+    .pop_up__title {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .pop_up__descript {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #707070;
+    }
+
+.p_subscr__footer {
+    /* 123 */
+}
+    .p_subscr__footer-title {
+        text-align: center;
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+.footer-get__wr_txt {
+    border-top: 1px solid #70707045;
+    padding-top: 17px;
+    padding-bottom: 40px;
+}
+.footer-get__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding-left: 34px;
+    color: #707070;
+}
+.footer-get__text::before {
+    top: 0;
+}
+.footer-get__text:last-child {
+    margin-bottom: 0;
+}
+
+.footer-desc {
+    border-top: 1px solid #70707045;
+    padding-top: 12px;
+}
+.footer-desc__text {
+    font-size: 12px;
+    opacity: 0.8;
+    color: #707070;
+}
+
+.p_subscr__footer {
+    padding-bottom: 40px;
+}
+
+.footer-famillies__icon {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.footer-famillies__wr_icon {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-content: center;
+    padding-bottom: 35px;
+}
+.footer-famillies__link {
+    display: flex;
+    align-self: center;
+    align-content: center;
+}
+
+.p_subscr__btn_wr {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    padding-top: 30px;
+}
+
+.p_subscr__btn {
+    border: none;
+    width: 250px;
+    height: 54px;
+    font-size: 16px;
+}
+
+.p_subscr__logo {
+    width: 52px;
+    height: 65px;
+}
+.p_subscr__link_lg {
+    display: block;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.bank_fr__body {
+    
+    margin-bottom: 32px;
+    position: relative;
+}
+.p_subscr .pop_up__body {
+    background: #EFEFEF;
+    border-radius: 4px;
+    padding: 32px 32px 22px;
+    position: relative;
+}
+
+.bank_fr__input_wr {
+    height: 42px;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.bank_fr__input {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border: 1px solid #8A8A8A;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 16px;
+}
+.bank_fr__input_novalid {
+    border: 1px solid red;
+}
+
+.pop_up__input_multi {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.pop_up__input_multi .bank_fr__input_wr {
+    max-width: 111px;
+}
+
+.bank_fr__text {
+    color: #707070;
+    font-size: 14px;
+}
+
+.subscription__loader_wr {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffd6;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.subscription__laoder {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 5px solid #23CBA7;
+    border-right-color: transparent;
+    animation: spinLoader 2s linear infinite;
+}
+
+.icon_card {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.p_subscr__title {
+    margin-bottom: 0;
+}
+.pop_up_op {
+    overflow: hidden;
+}
+
+@keyframes spinLoader {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.braintree-placeholder {
+    display: none;
+}
+.braintree-sheet__content--form {
+    background: #efefef !important;
+    border: none;
+    padding: 0 !important;
+}
+.braintree-sheet {
+    border: none;
+}
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field {
+    background: #fff !important;
+    border-radius: 4px;
+}
+
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__label, 
+.braintree-sheet__header {
+    display: none;
+}
+.braintree-form__flexible-fields {
+    display: flex;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+}
+.braintree-sheet__content--form .braintree-form__field-group {
+    margin-bottom: 20px !important;
+}
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field {
+    margin-top: 0;
+}
+
+.braintree-form__flexible-fields .expiration-date-field-group {
+    width: 45% !important;
+}
+.braintree-form__flexible-fields .braintree-form__field {
+    width: 100% !important;
+}
+.braintree-sheet--has-error .braintree-sheet__error {
+    display: none;
+}
+.braintree-sheet--has-error .braintree-sheet {
+    border: none;
+}
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field-error {
+    margin: 0;
+}
+.braintree-sheet__content--form .braintree-form__field-group.braintree-form__field-group--has-error .braintree-form__field-error {
+    display: none !important;
+}
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__icon-container {
+    display: none !important;
+}
+.braintree-form__flexible-fields .braintree-form__field-error {
+    display: none !important;
+}
+.braintree-loaded .braintree-sheet__container {
+    margin-bottom: 0;
+}
+
+@media(max-width:1024px) {
+    .footer-get__text:before {
+        height: 20px;
+        width: 20px;
+    }
+   
+}
+
+@media (max-width: 767px) {
+    .p_subscr {
+        max-width: 387px;
+        padding: 0 20px;
+    }
+    .bank_fr__body {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .pop_up__input_multi .bank_fr__input_wr {
+        max-width: 102px;
+    }
+    .p_subscr .pop_up__descript {
+        margin-bottom: 20px;
+    }
+    .p_subscr__title {
+        margin-bottom: 10px;
+    }
+    .p_subscr__logo {
+        width: 40px;
+        height: 50px;
+    }
+    .bank_fr__body {
+        padding: 32px 20px 22px;
+    }
+}
+
+@media (max-width: 376px) {
+    .p_subscr {
+        max-width: 337px;
+    }
+    .pop_up__input_multi .bank_fr__input_wr {
+        max-width: 82px;
+    }
+}
+@media (max-width: 321px) {
+    .p_subscr {
+        max-width: 337px;
+    }
+    .pop_up__input_multi .bank_fr__input_wr {
+        max-width: 82px;
+    }
+}
+
+
+/* @media (max-width: 767px) */
+

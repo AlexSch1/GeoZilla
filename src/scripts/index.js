@@ -1,12 +1,39 @@
-// import LikeButton from './Component/app.js'
 import $ from 'jquery'
-// const React = require('react')
-// const ReactDOM = require('react-dom')
-// const e = React.createElement
-// const domContainer = document.querySelector('.index_main__title')
-// ReactDOM.render(<LikeButton />, domContainer)
-
+import App from './react/Apps'
+import React from 'react'
+import { Provider } from 'react-redux'
+import createstore from './react/store'
+// import subscription from './react/actions/subscription'
+const ReactDOM = require('react-dom')
+const store = createstore()
+const domContainer = document.querySelector('#root')
+ReactDOM.render(<Provider store={store}><App></App></Provider>, domContainer)
 $(document).ready(function () {
+  function stateCookieModal () {
+    if (localStorage.getItem('cookiesModal')) {
+      let data = JSON.parse(localStorage.getItem('cookiesModal'))
+      if (data.cookiesModal >= 25) {
+        $('.cookies').addClass('cookies-open')
+        data.cookiesModal = 0
+        localStorage.setItem('cookiesModal', JSON.stringify(data))
+      } else {
+        data.cookiesModal += 1
+        localStorage.setItem('cookiesModal', JSON.stringify(data))
+      }
+    } else {
+      $('.cookies').addClass('cookies-open')
+    }
+  }
+  stateCookieModal()
+  $('.cookies__close').on('click', function (e) {
+    e.preventDefault()
+    $('.cookies').addClass('cookies-close').removeClass('cookies-open')
+    let data = {
+      cookiesModal: 0
+    }
+    localStorage.setItem('cookiesModal', JSON.stringify(data))
+  })
+
   // Call  popUp
   $('.popUpCall').click(function () {
     var popUpName = $(this).data('pop_up')
@@ -25,6 +52,7 @@ $(document).ready(function () {
   $('.pop_up__toggle').click(function () {
     $(this).closest('.pop_up__wr').removeClass('pop_up_active')
     $('html, body').removeClass('pop_up_cond')
+    $('html, body').removeClass('pop_up_op')
     return false
   })
 
@@ -243,9 +271,18 @@ $(document).ready(function () {
     if (navigator.appVersion.indexOf('Linux') !== -1) curOS = 'Linux'
     return curOS
   }
-
-  $('.cookies__close').on('click', function (e) {
-    e.preventDefault()
-    $('.cookies').addClass('cookies-close')
+  $('.index_main__title').on('click', function () {
+    $('html, body').addClass('pop_up_op');
+    store.dispatch({
+      type: 'SUBSCR',
+      payload: 'true'
+    })
+  })
+  $('.nav__log_in').on('click', function () {
+    $('html, body').addClass('pop_up_op');
+    store.dispatch({
+      type: 'LIG_IN',
+      payload: 'true'
+    })
   })
 })
