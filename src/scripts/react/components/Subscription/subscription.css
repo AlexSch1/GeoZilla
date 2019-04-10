@@ -252,6 +252,9 @@
 .braintree-loaded .braintree-sheet__container {
     margin-bottom: 0;
 }
+.braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__icon-container {
+    display: block !important;
+}
 
 @media(max-width:1024px) {
     .footer-get__text:before {
