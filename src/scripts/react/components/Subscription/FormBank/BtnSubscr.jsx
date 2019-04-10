@@ -14,6 +14,7 @@ const BtnSubscr = (props) => {
 
     function click(e) {
         e.preventDefault();
+        // return
         if (props.step === 1) {
             props.onClickFirstStep()
         } else if (props.step === 2) {

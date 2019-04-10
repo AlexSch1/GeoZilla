@@ -21,7 +21,7 @@ const FormBank = (props) => {
 
             setTimeout(() => {
                 // props.subscription_step_home()
-                props.subscription_step_again()
+                // props.subscription_step_again()
             }, 1000)
         }
 
