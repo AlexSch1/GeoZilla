@@ -9,24 +9,8 @@ const FormBank = (props) => {
         props.subscriptionBase({ openPop: true })
     }
 
-    function isNumeric(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    }
-
     function firstStep(e) {
-        let alltrigger = true
-
-        if (alltrigger) {
-            props.nextStep(props.step);
-
-            setTimeout(() => {
-                // props.subscription_step_home()
-                // props.subscription_step_again()
-            }, 1000)
-        }
-
-
-
+        props.nextStep(props.step);
     }
 
     function onClickEO(e) {

@@ -52,9 +52,11 @@ $(document).ready(function () {
   $('.pop_up__toggle').click(function () {
     $(this).closest('.pop_up__wr').removeClass('pop_up_active')
     $('html, body').removeClass('pop_up_cond')
-    $('html, body').removeClass('pop_up_op')
     return false
   })
+  $(document).on('click', '.pop_up__toggle', function() {
+    $('html, body').removeClass('pop_up_op')
+  });
 
   // File name
   document.getElementById('FileAttachment').onchange = function () {
