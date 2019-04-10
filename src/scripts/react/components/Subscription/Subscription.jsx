@@ -8,6 +8,10 @@ export default class SubscriptionPopUp extends React.Component {
     let stepAgain = () => {
       // this.props.subscription_step_again();
     }
+    let stepSuss = () => {
+      this.props.subscription_step_home();
+    }
+
     var button = document.querySelector('.p_subscr__btn');
     dropin.create({
       authorization: 'sandbox_ndqmmxdr_ggppr6wypy96y9hh',
@@ -48,6 +52,9 @@ export default class SubscriptionPopUp extends React.Component {
           if (err) {
             console.log(stepAgain)
           //  stepAgain()
+          }
+          if (payload) {
+            stepSuss()
           }
         });
       });
