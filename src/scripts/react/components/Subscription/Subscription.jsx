@@ -6,7 +6,7 @@ var dropin = require('braintree-web-drop-in');
 export default class SubscriptionPopUp extends React.Component {
   componentDidMount() {
     let stepAgain = () => {
-      // this.props.subscription_step_again();
+      this.props.subscription_step_again();
     }
     let stepSuss = () => {
       this.props.subscription_step_home();
@@ -47,10 +47,10 @@ export default class SubscriptionPopUp extends React.Component {
     }, function (createErr, instance) {
       button.addEventListener('click', function () {
         instance.requestPaymentMethod(function (err, payload) {
-          console.log(err)
-          console.log(payload)
           if (err) {
-            console.log(stepAgain)
+            if (err.message === 'No payment method is available.') {
+              return
+            }
           //  stepAgain()
           }
           if (payload) {
