@@ -11,6 +11,9 @@ export default class SubscriptionPopUp extends React.Component {
     let stepSuss = () => {
       this.props.subscription_step_home();
     }
+    let stepStart = (v) => {
+      this.props.subscription(v)
+    }
 
     var button = document.querySelector('.p_subscr__btn');
     dropin.create({
@@ -49,7 +52,7 @@ export default class SubscriptionPopUp extends React.Component {
         instance.requestPaymentMethod(function (err, payload) {
           if (err) {
             if (err.message === 'No payment method is available.') {
-              return
+              stepStart({openPop: 'true'})
             }
           //  stepAgain()
           }
