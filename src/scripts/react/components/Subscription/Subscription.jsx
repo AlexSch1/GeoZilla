@@ -60,6 +60,7 @@ export default class SubscriptionPopUp extends React.Component {
     const { openPop, step } = state.subscriptionState;
 
     let popUp = null;
+
     let popUpFooter = (
       <div className="pop_up__footer p_subscr__footer">
         <div className="footer-get">
@@ -91,8 +92,8 @@ export default class SubscriptionPopUp extends React.Component {
 
     
 
-    if (1) {
-      // if (openPop) {
+    // if (1) {
+      if (openPop) {
       popUp = (
         <div className="pop_up_r">
           <div className="pop_up__bg pop_up_active">
