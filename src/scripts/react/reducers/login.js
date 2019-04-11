@@ -1,6 +1,7 @@
 const initialState = {
     openPop: false,
     login: false,
+    connect: false,
     loginName: {
         value: '',
         valid: true
@@ -16,13 +17,13 @@ export default (state = initialState, action) => {
         case 'LIG_IN':
             return {
                 ...state,
-                openPop: action.payload
+                openPop: true
             }
         case 'SET_VALUE':
             let name = action.payload.name;
             return {
                 ...state,
-                [name]: { ...state[name], value: action.payload.value }
+                [name]: { valid: action.payload.valid, value: action.payload.value }
             }
         case 'SET_LOGIN':
             return {
@@ -39,6 +40,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 openPop: false
+            }
+        case 'LOG_CONNECT':
+            return {
+                ...state,
+                connect: action.payload
             }
         default:
             return state

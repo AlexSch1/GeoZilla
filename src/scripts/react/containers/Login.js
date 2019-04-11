@@ -3,9 +3,16 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as loginActions from '../actions/login'
 
+function ajxLogIn(name, pass) {
+  console.log('hear')
+  return true
+}
+
+
 let mapStateToProps = ({ login }) => {
   return ({
-    login
+    login,
+    connectLogIn: login.connect === 'load' ? ajxLogIn() : false
   })
 }
 

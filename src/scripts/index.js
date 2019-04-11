@@ -3,6 +3,7 @@ import App from './react/Apps'
 import React from 'react'
 import { Provider } from 'react-redux'
 import createstore from './react/store'
+
 // import subscription from './react/actions/subscription'
 const ReactDOM = require('react-dom')
 const store = createstore()
@@ -285,6 +286,13 @@ $(document).ready(function () {
     store.dispatch({
       type: 'LIG_IN',
       payload: 'true'
+    })
+  })
+  $('.index_main__text').on('click', function () {
+    $('html, body').addClass('pop_up_op');
+    store.dispatch({
+      type: 'CREATE_ACC_OPEN',
+      payload: true
     })
   })
 })

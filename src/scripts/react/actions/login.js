@@ -14,3 +14,11 @@ export const loginClose = (action) => ({
     type: 'LOG_CLOSE',
     payload: action
 })
+export const loginConnect = (action) => ({
+    type: 'LOG_CONNECT',
+    payload: action
+})
+export const loginOpen = (action) => ({
+    type: 'LIG_IN',
+    payload: true
+})

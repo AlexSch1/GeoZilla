@@ -34,7 +34,7 @@ export default class SubscriptionPopUp extends React.Component {
             cvv: {
               placeholder: 'CVC',
               type: 'password',
-              
+
             }
           },
           styles: {
@@ -48,13 +48,15 @@ export default class SubscriptionPopUp extends React.Component {
         }
       }
     }, function (createErr, instance) {
+      console.log(createErr)
       button.addEventListener('click', function () {
+
         instance.requestPaymentMethod(function (err, payload) {
           if (err) {
             if (err.message === 'No payment method is available.') {
-              stepStart({openPop: 'true'})
+              stepStart({ openPop: 'true' })
             }
-          //  stepAgain()
+            //  stepAgain()
           }
           if (payload) {
             stepSuss()
@@ -64,13 +66,10 @@ export default class SubscriptionPopUp extends React.Component {
     });
   }
 
-  
+
   render() {
     const state = this.props;
     const { openPop, step } = state.subscriptionState;
-
-    let popUp = null;
-
     let popUpFooter = (
       <div className="pop_up__footer p_subscr__footer">
         <div className="footer-get">
@@ -100,36 +99,31 @@ export default class SubscriptionPopUp extends React.Component {
       </div>
     );
 
-    
+    let popUp = (
+      <div className="pop_up_r">
+        <div className="pop_up__bg pop_up_active">
+          <div className="p_subscr pop_up__wr pop_up_active">
+            <a href="#" className="pop_up__toggle cross" onClick={this.props.subscription_step_close}></a>
 
-    // if (1) {
-      if (openPop) {
-      popUp = (
-        <div className="pop_up_r">
-          <div className="pop_up__bg pop_up_active">
-            <div className="p_subscr pop_up__wr pop_up_active">
-              <a href="#" className="pop_up__toggle cross" onClick={this.props.subscription_step_close}></a>
-              
-              
-              <FormBank
-                nextStep={this.props.subscription_step}
-                step={this.props.subscriptionState.step}
-                setvalue={this.props.subscription_setvalue}
-                infocard={this.props.subscriptionState}
-                subscription_no_valid={this.props.subscription_no_valid}
-                subscription_step_home={this.props.subscription_step_home}
-                subscriptionBase={this.props.subscription}
-                subscription_step_close={this.props.subscription_step_close}
-                subscription_step_again={this.props.subscription_step_again}
-              ></FormBank>
-              
-              {(step === 3 || step === 4) ? null : popUpFooter}
 
-            </div>
+            <FormBank
+              nextStep={this.props.subscription_step}
+              step={this.props.subscriptionState.step}
+              setvalue={this.props.subscription_setvalue}
+              infocard={this.props.subscriptionState}
+              subscription_no_valid={this.props.subscription_no_valid}
+              subscription_step_home={this.props.subscription_step_home}
+              subscriptionBase={this.props.subscription}
+              subscription_step_close={this.props.subscription_step_close}
+              subscription_step_again={this.props.subscription_step_again}
+            ></FormBank>
+
+            {(step === 3 || step === 4) ? null : popUpFooter}
+
           </div>
         </div>
-      )
-    }
+      </div>
+    )
     return (
       <div>{popUp}</div>
     )
