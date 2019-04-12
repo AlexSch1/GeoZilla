@@ -1,8 +1,16 @@
 const initialState = {
     openPop: false,
     step: 'change',
+
     phoneNum: '',
     mailNum: '',
+    changeFalid: false,    
+
+    nextStepTo: '',
+
+
+
+
     codeNum: '',
     code: 123456
 
@@ -13,7 +21,8 @@ export default (state = initialState, action) => {
         case 'CREATE_ACC_OPEN':
             return {
                 ...state,
-                openPop: action.payload
+                openPop: action.payload,
+                step: 'change'
             }
         case 'SET_CREATE_CLOSE':
             return {
@@ -29,7 +38,8 @@ export default (state = initialState, action) => {
         case 'SET_CREATE_CONTINUE':
             return {
                 ...state,
-                step: 'continue'
+                step: 'continue',
+                nextStepTo: action.payload
             }
         case 'SET_CREATE_STEP':
             return {
