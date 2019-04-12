@@ -1,26 +1,8 @@
-import React from 'react'
-import MaskedInput from 'react-text-mask'
-import InputMask from 'react-input-mask';
-import BtnSubscr from './BtnSubscr.jsx'
+import React from 'react';
+import BtnSubscr from './BtnSubscr.jsx';
+
 const FormBank = (props) => {
-    // console.log(props)
 
-    function getFirstStart() {
-        props.subscriptionBase({ openPop: true })
-    }
-
-    function firstStep(e) {
-        props.nextStep(props.step);
-    }
-
-    function onClickEO(e) {
-        let name = e.target.getAttribute('data-name');
-        let value = e.target.value;
-        props.setvalue({
-            name,
-            value
-        })
-    }
 
     let loader = (
         <div className="subscription__loader_wr">
@@ -61,23 +43,24 @@ const FormBank = (props) => {
                 <div className="pop_up__body2 dropin-containe"></div>
                 <p className="bank_fr__text">You won’t be charged until after free week.</p>
                 <p className="bank_fr__text">We will remind you 1 day before your trial ends.</p>
-                {props.step === 2 ? loader : null}
-                {props.step === 3 ? gohome : null}
-                {props.step === 4 ? tryagain : null}
+
+                {props.step === 'step_connect' ? loader : null}
+                {props.step === 'step_go_home' ? gohome : null}
+                {props.step === 'step_again' ? tryagain : null}
 
 
             </div>
+
             <form action="#" method="get" className="bank_fr">
                 <div className="bank_fr__footer pop_up__input_wr pop_up__input_wr_btn p_subscr__btn_wr">
                     <BtnSubscr
-                        step={props.step}
-                        onClickFirstStep={firstStep}
-                        onClickStep_3={props.subscription_step_close}
-                        getFirstStart={getFirstStart}
+                        nameBtn={props.nameBtn}
+                        onClickBtn={props.onClickBtn}
                     >
                     </BtnSubscr>
                 </div>
             </form>
+
         </div>
     )
 }

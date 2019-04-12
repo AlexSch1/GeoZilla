@@ -1,6 +1,6 @@
 const initialState = {
   openPop: false,
-  step: 1
+  step: 'step_main'
 
 }
 export default (state = initialState, action) => {
@@ -9,12 +9,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         openPop: action.payload,
-        step: 1
+        step: 'step_main'
       }
-    case 'SUBSCR_STEP':
+    case 'SUBSCR_CONNECT':
       return {
         ...state,
-        step: 2
+        step: 'step_connect'
       }
     case 'SUBSCR_SET_VALUE':
       let name = action.payload.name;
@@ -25,17 +25,17 @@ export default (state = initialState, action) => {
     case 'SUBSCR_HOME':
       return {
         ...state,
-        step: 3
+        step: 'step_go_home'
       }
     case 'SUBSCR_AGAIN':
       return {
         ...state,
-        step: 4
+        step: 'step_again'
       }
     case 'SUBSCR_CLOSE':
       return {
         ...state,
-        step: 1,
+        step: 'step_main',
         openPop: false
       }
     default:

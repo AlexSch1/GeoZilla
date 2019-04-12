@@ -3,9 +3,8 @@ export const subscription = (action) => ({
   payload: action
 })
 
-export const subscription_step = (action) => ({
-  type: 'SUBSCR_STEP',
-  payload: action
+export const subscription_connect = () => ({
+  type: 'SUBSCR_CONNECT'
 })
 
 export const subscription_setvalue = (action) => ({
@@ -24,7 +23,6 @@ export const subscription_step_again = (action) => ({
 })
 
 
-export const subscription_step_close = (action) => ({
-  type: 'SUBSCR_CLOSE',
-  payload: action
+export const subscription_step_close = () => ({
+  type: 'SUBSCR_CLOSE'
 })

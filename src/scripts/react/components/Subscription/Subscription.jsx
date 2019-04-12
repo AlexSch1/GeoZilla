@@ -12,7 +12,7 @@ export default class SubscriptionPopUp extends React.Component {
       this.props.subscription_step_home();
     }
     let stepStart = (v) => {
-      this.props.subscription(v)
+      this.props.subscription({payload: true})
     }
 
     var button = document.querySelector('.p_subscr__btn');
@@ -54,9 +54,10 @@ export default class SubscriptionPopUp extends React.Component {
         instance.requestPaymentMethod(function (err, payload) {
           if (err) {
             if (err.message === 'No payment method is available.') {
-              stepStart({ openPop: 'true' })
+              stepStart({ openPop: 'true' });
+              return
             }
-            //  stepAgain()
+             stepAgain()
           }
           if (payload) {
             stepSuss()
@@ -66,10 +67,18 @@ export default class SubscriptionPopUp extends React.Component {
     });
   }
 
+  testClick = () => {
+
+    // let click = this.props.subscription_step_home;
+    // let click = this.props.subscription_step_again;
+
+    
+  }
+
 
   render() {
     const state = this.props;
-    const { openPop, step } = state.subscriptionState;
+    const { step } = state.subscriptionState;
     let popUpFooter = (
       <div className="pop_up__footer p_subscr__footer">
         <div className="footer-get">
@@ -99,26 +108,60 @@ export default class SubscriptionPopUp extends React.Component {
       </div>
     );
 
+    let formCard = null;
+
+    switch (step) {
+      case 'step_main':
+        formCard = (<FormBank
+          nameBtn='start free trial'
+          step={this.props.subscriptionState.step}
+          onClickBtn={this.props.subscription_connect}
+
+        ></FormBank>)
+
+        break;
+
+      case 'step_connect':
+        formCard = (<FormBank
+          nameBtn='processing payment...'
+          step={this.props.subscriptionState.step}
+          onClickBtn={false}
+        ></FormBank>)
+
+        break;
+
+      case 'step_go_home':
+        formCard = (<FormBank
+          nameBtn='go to home page'
+          step={this.props.subscriptionState.step}
+          onClickBtn={this.props.subscription_step_close}
+        ></FormBank>)
+
+        break;
+      case 'step_again':
+        formCard = (<FormBank
+          nameBtn='try again'
+          step={this.props.subscriptionState.step}
+          onClickBtn={()=> this.props.subscription({payload: true})}
+        ></FormBank>)
+
+        break;
+
+      default:
+        break;
+    }
+
+
+
     let popUp = (
       <div className="pop_up_r">
         <div className="pop_up__bg pop_up_active">
           <div className="p_subscr pop_up__wr pop_up_active">
             <a href="#" className="pop_up__toggle cross" onClick={this.props.subscription_step_close}></a>
 
+            {formCard}
 
-            <FormBank
-              nextStep={this.props.subscription_step}
-              step={this.props.subscriptionState.step}
-              setvalue={this.props.subscription_setvalue}
-              infocard={this.props.subscriptionState}
-              subscription_no_valid={this.props.subscription_no_valid}
-              subscription_step_home={this.props.subscription_step_home}
-              subscriptionBase={this.props.subscription}
-              subscription_step_close={this.props.subscription_step_close}
-              subscription_step_again={this.props.subscription_step_again}
-            ></FormBank>
-
-            {(step === 3 || step === 4) ? null : popUpFooter}
+            {(step === 'step_go_home' || step === 'step_again') ? null : popUpFooter}
 
           </div>
         </div>
