@@ -256,7 +256,7 @@
 @media (max-width: 767px) {
     .p_create1 {
         max-width: 360px;
-        padding: 30px 26px 0;
+        padding: 30px 22px 20px;
     }
     
     .pop_up__input_multi .create1_fr__input_wr {
@@ -287,6 +287,9 @@
     }
     .pop_up__input_multi .create1_fr__input_wr {
         max-width: 82px;
+    }
+    .p_create1 {
+        padding: 30px 17px 20px;
     }
 }
 @media (max-width: 321px) {

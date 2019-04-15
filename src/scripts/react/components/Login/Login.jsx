@@ -63,7 +63,6 @@ export default class Login extends React.Component {
         if (this.props.connectLogIn) {
             this.props.loginConnect('true');
         }
-        // console.log(this.props.connectLogIn)
         let popUp = (
             <div className="pop_up_r">
 

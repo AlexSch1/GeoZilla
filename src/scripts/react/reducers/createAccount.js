@@ -32,6 +32,7 @@ export default (state = initialState, action) => {
         case 'SET_CREATE_CLOSE':
             return {
                 ...state,
+                step: 'change',
                 openPop: false
             }
         case 'SET_CREATE_VALUE':

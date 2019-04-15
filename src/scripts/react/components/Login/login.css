@@ -172,6 +172,10 @@
     .pop_up__input_multi .login_fr__input_wr {
         max-width: 82px;
     }
+    .p_login {
+        padding: 30px 20px 0;
+
+    }
 }
 @media (max-width: 321px) {
     .p_login {

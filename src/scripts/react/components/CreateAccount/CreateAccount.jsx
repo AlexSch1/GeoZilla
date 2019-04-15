@@ -99,7 +99,7 @@ export default class CreateAccount extends React.Component {
 
                 <div className="pop_up__bg pop_up_active p_create1_wr">
                     <div className="p_create1 pop_up__wr pop_up_active">
-                        <a href="#" className="pop_up__toggle cross"></a>
+                        <a href="#" className="pop_up__toggle cross" onClick={this.props.createClose}></a>
 
 
                         <div className="pop_up__head">

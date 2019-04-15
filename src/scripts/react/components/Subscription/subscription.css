@@ -303,6 +303,11 @@
     .bank_fr__body {
         padding: 32px 20px 22px;
     }
+    .p_subscr .pop_up__body {
+        padding: 32px 20px 22px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
 }
 
 @media (max-width: 376px) {

@@ -96,19 +96,6 @@ $(document).ready(function () {
         e.preventDefault()
       }
     }
-    // var fieldIdMail = $('.send_request [name="id"]')
-    // if ($(fieldIdMail).val() === '') {
-    //   $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
-    //   $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
-    //   e.preventDefault()
-    // } else {
-    //   if (!validateID(fieldIdMail, trigger)) {
-    //     $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').addClass('pop_up__warm_text_no_valid')
-    //     e.preventDefault()
-    //   } else {
-    //     $(fieldIdMail).closest('.pop_up__input_wr').find('.pop_up__warm_text_valid').removeClass('pop_up__warm_text_no_valid')
-    //   }
-    // }
     if ($('.send_request textarea').val() === '') {
       $('.send_request textarea').closest('.pop_up__input_wr').find('.pop_up__warm_text_chose').addClass('pop_up__warm_text_no_choose')
       e.preventDefault()
@@ -116,20 +103,6 @@ $(document).ready(function () {
     if (!trigger) return false
   }, false)
 
-  // Validator id email
-  // function validateID (_this, trigger) {
-  //   var ckEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
-  //   var type = true
-  //   if (type) {
-  //     if (!ckEmail.test($(_this).val())) {
-  //       return false
-  //     } else {
-  //       return true
-  //     }
-  //   } else {
-  //     return true
-  //   }
-  // }
   // Validator form impus
   function validate (_this, trigger) {
     var ckName = /^[А-Яа-яA-Za-z\s]{1,20}$/
@@ -206,7 +179,6 @@ $(document).ready(function () {
     }
     if (e.keyCode === 8) {
       if (lengthArea === 0) {
-        console.log('clear')
         $('.pop_up__warm_counter').hide()
         return false
       }
@@ -232,7 +204,7 @@ $(document).ready(function () {
   // .start_free_trial
   $('.start_free_trial').on('click', function (e) {
     e.preventDefault()
-    console.log('Ваша платформа: ' + findOS())
+    // console.log('Ваша платформа: ' + findOS())
     let nameUserPlatfornOne = findOS()
     if (nameUserPlatfornOne === 'MacOS') {
       document.location.href = 'https://itunes.apple.com/app/id981856216?_branch_match_id=623206276219064180'
