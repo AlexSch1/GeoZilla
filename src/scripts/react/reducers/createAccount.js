@@ -2,20 +2,25 @@ const initialState = {
     openPop: false,
     step: 'change',
 
-    phoneNum: '',
-    mailNum: '',
-    changeFalid: false,    
+    valueChangeStep: {
+        value: ''
+    },
 
-    nextStepTo: '',
+    valueStepCreate: {
+        emailOrNum: '',
+        pass: '',
+        name: ''
+    },
 
+    cbCode: '123456',
 
-
-
-    codeNum: '',
-    code: 123456
+    nextStepTo: ''
 
 
 }
+
+
+
 export default (state = initialState, action) => {
     switch (action.type) {
         case 'CREATE_ACC_OPEN':
@@ -33,13 +38,12 @@ export default (state = initialState, action) => {
             let name = action.payload.name;
             return {
                 ...state,
-                [name]: action.payload.value
+                valueChangeStep: {value: action.payload.value }
             }
         case 'SET_CREATE_CONTINUE':
             return {
                 ...state,
-                step: 'continue',
-                nextStepTo: action.payload
+                valueStepCreate: {...action.payload}
             }
         case 'SET_CREATE_STEP':
             return {

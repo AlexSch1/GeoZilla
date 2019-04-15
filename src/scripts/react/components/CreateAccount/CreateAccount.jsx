@@ -7,28 +7,18 @@ import InputMask from 'react-input-mask';
 import CreateField from './CreateField.jsx';
 import CreateChange from './CreateChange.jsx';
 import BtnCreate from './BtnCreate.jsx';
+import CreateActivate from './CreateActivate.jsx';
 
 export default class CreateAccount extends React.Component {
-    
+
 
     onSetValueInStore = (targetName, targetValue) => {
-        let name = targetName;
+        // let name = targetName;
         let value = targetValue
 
         this.props.createSetValue({
-            name,
             value
         })
-    }
-
-    onClickBtnNext = () => {
-        let { step, nextStepTo } = this.props.createAccount;
-
-        if (nextStepTo === 'cantinue_mail') {
-            console.log('TO MAIL')
-        } else {
-            console.log('TO PHONE')
-        }
     }
 
     changePop = () => {
@@ -36,57 +26,67 @@ export default class CreateAccount extends React.Component {
         this.props.loginOpen();
     }
 
+    onProfilePage = (e) => {
+        e.preventDefault();
+    }
+
+
 
     render() {
-        console.log(this.props.createAccount)
+        // console.log(this.props.createAccount)
 
         let { step } = this.props.createAccount;
 
         let stateForm = null;
-        let btn = null;
-
         switch (step) {
             case 'change':
                 stateForm = (
                     <CreateChange
                         onSetValueInStore={this.onSetValueInStore}
-                        phoneNum={this.props.createAccount.phoneNum}
-                        mailNum={this.props.createAccount.mailNum}
-                        createContinue={this.props.createContinue}
-                        createFirstMain={this.props.createFirstMain}
+                        createNextStape={this.props.createNextStape}
                         changePop={this.changePop}
-                    ></CreateChange>
-                );
-
-                btn = (
-                    <BtnCreate
-                        name='sign up'
-                        onClick={null}
-                        disabled={true}
-                    ></BtnCreate>
-                )
+                    ></CreateChange>);
 
                 break;
-            case 'continue':
+            case 'cantinue_mail':
                 stateForm = (
-                    <CreateChange
-                        onSetValueInStore={this.onSetValueInStore}
-                        phoneNum={this.props.createAccount.phoneNum}
-                        mailNum={this.props.createAccount.mailNum}
+                    <CreateField
+                        step={step}
+                        valueFieldStep={this.props.createAccount.valueChangeStep.value}
+                        changePop={this.changePop}
+                        createNextStape={this.props.createNextStape}
                         createContinue={this.props.createContinue}
-                        createFirstMain={this.props.createFirstMain}
-                        createClose={this.createClose}
-                    ></CreateChange>
-                );
+                    ></CreateField>)
+                break;
+            case 'cantinue_tel':
+                stateForm = (
+                    <CreateField
+                        step={step}
+                        valueFieldStep={this.props.createAccount.valueChangeStep.value}
+                        changePop={this.changePop}
+                        createNextStape={this.props.createNextStape}
+                        createContinue={this.props.createContinue}
+                    ></CreateField>)
+                break;
+            case 'cantinue_mail_activate':
+                stateForm = (
+                    <CreateActivate
+                        valueUserConect={this.props.createAccount.valueStepCreate.emailOrNum}
+                        codeActivate={this.props.createAccount.cbCode}
+                        createNextStape={this.props.createNextStape}
+                    >
 
-                btn = (
-                    <BtnCreate
-                        name='continue'
-                        onClick={this.onClickBtnNext}
-                        disabled={false}
-                    ></BtnCreate>
-                )
+                    </CreateActivate>)
+                break;
+            case 'cantinue_tel_activate':
+                stateForm = (
+                    <CreateActivate
+                        valueUserConect={this.props.createAccount.valueStepCreate.emailOrNum}
+                        createNextStape={this.props.createNextStape}
+                        codeActivate={this.props.createAccount.cbCode}
+                    >
 
+                    </CreateActivate>)
                 break;
 
             default:
@@ -106,7 +106,9 @@ export default class CreateAccount extends React.Component {
                             <a href="#" className="p_create1__link_lg">
                                 <img src="../../../../../static/img/icon/GeoZilla-LOGO.png" alt="logo" className="p_create1__logo" />
                             </a>
-                            <h6 className="pop_up__title p_create1__title"> Account created!  </h6>
+                            <h6 className="pop_up__title p_create1__title">
+                                {step !== 'finish_activate' ? 'Create GeoZilla account' : 'Account created!'}
+                            </h6>
                         </div>
 
                         <div className="pop_up__body">
@@ -120,18 +122,28 @@ export default class CreateAccount extends React.Component {
 
                                 </div>
 
-                                <div className="login_fr__footer pop_up__input_wr pop_up__input_wr_btn p_create1__btn_wr">
-                                    {btn}
-
-                                </div>
-
                             </form>
-                            <p className="p_create1__desc_footer">By continuing to use GeoZilla, you agree to our  </p>
-                            <p className="p_create1__desc_footer p_create1__desc_footer_multi">
-                                <a href="#">Terms of Use</a>
-                                <span>and</span>
-                                <a href="#">Privacy Policy</a>
-                            </p>
+                            {step !== 'finish_activate' ? <React.Fragment>
+                                <p className="p_create1__desc_footer">By continuing to use GeoZilla, you agree to our  </p>
+                                <p className="p_create1__desc_footer p_create1__desc_footer_multi">
+                                    <a href="#">Terms of Use</a>
+                                    <span>and</span>
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </React.Fragment> : <p className="finish_activate_txt">You have successfully joined GeoZilla Community.</p>}
+
+                            {step !== 'finish_activate' ? null : <a
+                                href="#"
+                                className="btn p_create1__btn finish_activate_btn"
+                                type="submit"
+                                onClick={this.onProfilePage}
+                            >
+                                profile page
+                                <div className="btn__hover"></div>
+                                <div className="btn__active"></div>
+                            </a>}
+
+
                         </div>
                     </div>
                 </div>

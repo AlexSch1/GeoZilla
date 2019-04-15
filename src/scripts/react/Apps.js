@@ -17,7 +17,7 @@ class App extends React.Component {
       <React.Fragment>
         {pop_subscr && <Subscription></Subscription>}
         {pop_login && <Login></Login>}
-        {1 && <CreateAccount></CreateAccount>}
+        {pop_create && <CreateAccount></CreateAccount>}
       </React.Fragment>
       
     )

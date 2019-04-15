@@ -16,7 +16,7 @@ export const createClose = (action) => ({
     type: 'SET_CREATE_CLOSE',
     payload: action
 })
-export const createFirstMain = (action) => ({
-    type: 'CREATE_ACC_OPEN',
-    payload: action
-})
+// export const createFirstMain = (action) => ({
+//     type: 'CREATE_ACC_OPEN',
+//     payload: action
+// })
