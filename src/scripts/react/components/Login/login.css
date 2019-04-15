@@ -32,12 +32,22 @@
         font-size: 30px;
         text-align: center;
         margin-top: 0;
+        font-family: Avenir-Black;
     }
     .p_login__title {
         font-size: 28px;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
+        line-height: 1;
     }
 
+    .pop_up__title.p_login__title {
+        font-size: 28px;
+    }
+
+    .p_login .pop_up__toggle {
+        right: 15px;
+        top: 15px;
+    }
 
 
 
@@ -73,7 +83,7 @@
 .login_fr__body {
     padding-bottom: 31px;
     position: relative;
-    border-bottom: 1px solid #70707045;
+    border-bottom: 1px solid #EFEFEF;
 }
 
 .login_fr__input_wr {
@@ -166,6 +176,10 @@
 }
 
 @media (max-width: 376px) {
+    .p_login__title {
+        margin-bottom: 20px;
+        line-height: normal;
+    }
     .p_login {
         max-width: 337px;
     }

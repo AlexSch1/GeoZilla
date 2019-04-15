@@ -8,6 +8,73 @@ export default class Login extends React.Component {
         super(props)
     }
 
+    // state = {
+    //     emailOrPhone: '',
+    //     pass: '',
+
+
+    //     formErrors: { emailOrPhone: '', password: '' },
+
+    //     validEmailOrPhone: false,
+    //     validPass: false,
+
+    //     formValid: false
+    // }
+
+    // onSetEmailOrNum = (e) => {
+    //     this.setState({
+    //         emailOrPhone: e.target.value
+    //     }, () => {this.validateForm('emailOrPhone', e.target.value)});
+    // }
+
+    // onBlur = (name, val) => {
+    //     this.validateForm(name, val)
+    // }
+
+    // onSetPass = (e) => {
+    //     this.setState({
+    //         pass: e.target.value
+    //     }, () => {this.validateForm('pass', e.target.value)});
+    // }
+
+    // validateForm = (fieldName, value) => {
+    //     let fieldValidationErrors = this.state.formErrors;
+    //     let emailValid = this.state.validEmailOrPhone;
+    //     let passwordValid = this.state.validPass;
+
+    //     switch (fieldName) {
+    //         case 'emailOrPhone':
+    //             let ckEmailN = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/
+    //             emailValid = ckEmailN.test(value)
+    //             fieldValidationErrors.emailOrPhone = emailValid ? '' : 'is invalid';
+    //             break;
+    //         case 'pass':
+    //             passwordValid = (valuePass === '');
+    //             fieldValidationErrors.password = passwordValid ? '' : 'is too short';
+    //             break;
+    //         default:
+    //             break;
+    //     }
+
+    //     this.setState({
+    //         formErrors: fieldValidationErrors,
+    //         validEmailOrPhone: emailValid,
+    //         validPass: passwordValid
+    //       }, this.validateForm);
+
+
+    // }
+
+    // validateForm = () => {
+    //     this.setState({formValid: this.state.validEmailOrPhone && this.state.validPass});
+    // }
+
+    // className={`form-group ${this.errorClass(this.state.formErrors.email)}`}
+
+    // errorClass = (error) => {
+    //     return (error.length === 0 ? '' : 'has-error');
+    // }
+
     setValueLogin = (val, nam) => {
         let name = nam;
         let value = val;
@@ -15,8 +82,9 @@ export default class Login extends React.Component {
             name,
             valid: true,
             value
-        })
+        });
     }
+
     onClickBtn = (e) => {
         e.preventDefault();
 
@@ -59,6 +127,7 @@ export default class Login extends React.Component {
         }
 
     }
+
     render() {
         if (this.props.connectLogIn) {
             this.props.loginConnect('true');

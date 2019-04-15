@@ -2,6 +2,7 @@ import React from 'react';
 
 import Input from '../Form/Input.jsx';
 import InputMask from 'react-input-mask';
+// import intlTelInput from 'intl-tel-input/build/js/intlTelInput.min.js';
 
 export default class CreateChange extends React.Component {
     state = {
@@ -15,13 +16,25 @@ export default class CreateChange extends React.Component {
 
     }
 
+    // componentDidMount() {
+    //     var input = document.querySelector("#phone");
+    //     window.intlTelInput(input);
+    // }
+
     onSetValue = (value, name) => {
         this.setState({
             [name]: value
-        }, this.validateField(value, name))
+        })
+    }
+
+    onBlurSerValue = (value, name) => {
+        
+        this.validateField(value, name)
     }
 
     validateField = (value, name) => {
+        
+
         let formErrors = this.state.formErrors;
         let mailValid = this.state.mailValid;
         let phoneValid = this.state.phoneValid;
@@ -54,7 +67,7 @@ export default class CreateChange extends React.Component {
     validateForm = () => {
         this.setState({
             formValid: (this.state.mailValid === true) || (this.state.phoneValid === true)
-        }, ()=>{
+        }, () => {
             if (!this.state.formValid) return
             let value = '';
             if (this.state.mailValid) {
@@ -91,6 +104,10 @@ export default class CreateChange extends React.Component {
             <React.Fragment>
                 <div className="create1_fr__body">
 
+                    {/* <div className="pop_up__input_wr create1_fr__input_wr">
+                        <input type="tel" className="login_fr__input" id="phone"/>
+                    </div> */}
+
                     <div className="pop_up__input_wr create1_fr__input_wr">
                         <Input
                             type="email"
@@ -100,6 +117,7 @@ export default class CreateChange extends React.Component {
                             className='login_fr__input'
                             value={this.state.mailNum}
                             handler={this.onSetValue}
+                            onBlur={this.onBlurSerValue}
                         >
                         </Input>
                     </div>
@@ -113,6 +131,7 @@ export default class CreateChange extends React.Component {
                             name="phoneNum"
                             value={this.state.phoneNum}
                             onChange={e => this.onSetValue(e.target.value, e.target.name)}
+                            onBlur={e => this.onBlurSerValue(e.target.value, e.target.name)}
                         >
                         </InputMask>
                     </div>

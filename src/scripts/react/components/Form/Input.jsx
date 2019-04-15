@@ -22,6 +22,7 @@ export default class Input extends React.Component {
                 value={this.props.value}
                 onChange={this.onHandler}
                 className={classNameStr.join(' ')}
+                onBlur={this.props.onBlur ? (e)=>this.props.onBlur(e.target.value, this.props.name) : null}
             >
             </input>
         )

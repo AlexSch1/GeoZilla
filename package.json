@@ -62,6 +62,7 @@
     "babel-preset-react": "^6.24.1",
     "braintree-web-drop-in": "^1.17.1",
     "custom-scrollbar": "0.0.2",
+    "intl-tel-input": "^15.0.1",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9",
     "react": "^16.8.3",
